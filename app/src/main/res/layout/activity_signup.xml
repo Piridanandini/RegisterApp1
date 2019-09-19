@@ -1,0 +1,51 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/flower11"
+    >
+
+
+
+
+
+
+
+
+   <Button android:id="@+id/add_device"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="Add Device"
+        android:background="@color/colorAccent"
+        android:layout_marginTop="100dp"
+        android:textColor="@android:color/white"
+        android:layout_marginLeft="130dp"
+        android:gravity="center"
+        />
+
+
+
+
+
+    <Button android:id="@+id/install"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="Installation/Service"
+        android:background="@color/colorAccent"
+        android:layout_marginTop="250dp"
+        android:textColor="@android:color/white"
+        android:layout_marginLeft="130dp"
+        android:gravity="center"
+        />
+
+
+
+
+
+
+
+
+
+
+</RelativeLayout>

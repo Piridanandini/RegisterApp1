@@ -1,0 +1,402 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+
+
+
+
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+
+
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="1500dp"
+                android:orientation="vertical"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:paddingTop="60dp"
+                android:layout_marginTop="-50dp">
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/service_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:theme="@style/TextLabel">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/ic_date"
+                        android:layout_marginLeft="-250dp"
+                        android:layout_marginTop="-35dp"/>
+
+                    <EditText
+                        android:id="@+id/service"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        android:hint="Vehicle Type"
+                        android:layout_marginLeft="55dp"/>
+
+
+                </android.support.design.widget.TextInputLayout>
+
+
+                <!--phone-->
+
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/vehicle_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:theme="@style/TextLabel">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/ic_dvr"
+                        android:layout_marginLeft="-250dp"
+                        android:layout_marginTop="-35dp"/>
+
+                    <EditText
+                        android:id="@+id/vehicle_no"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        android:hint="Vehicle No"
+                        android:layout_marginLeft="55dp"/>
+
+
+                </android.support.design.widget.TextInputLayout>
+
+
+                <!--full name-->
+
+
+
+
+
+                <!--email-->
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/device_name_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:theme="@style/TextLabel">
+
+                    <EditText
+                        android:id="@+id/device_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        android:hint="Device Name"
+                        android:layout_marginLeft="55dp"/>
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/ic_device_name"
+                        android:layout_marginLeft="-250dp"
+                        android:layout_marginTop="-35dp"/>
+
+
+                </android.support.design.widget.TextInputLayout>
+
+                <!--pass-->
+
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/device_imei_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:theme="@style/TextLabel">
+
+                    <EditText
+                        android:id="@+id/device_imei_no"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        android:hint="Device IMEI No"
+                        android:layout_marginLeft="55dp"/>
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/ic_confirmation_number"
+                        android:layout_marginLeft="-250dp"
+                        android:layout_marginTop="-35dp"/>
+
+
+                </android.support.design.widget.TextInputLayout>
+
+
+
+
+
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/sim_name_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:theme="@style/TextLabel">
+
+                    <EditText
+                        android:id="@+id/sim_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        android:hint="SIM Name"
+                        android:layout_marginLeft="55dp"/>
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/ic_sim_card"
+                        android:layout_marginLeft="-250dp"
+                        android:layout_marginTop="-35dp"/>
+
+
+                </android.support.design.widget.TextInputLayout>
+
+
+
+
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/sim_imei_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:theme="@style/TextLabel">
+
+                    <EditText
+                        android:id="@+id/sim_imei_no"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        android:hint="SIM IMEI No"
+                        android:layout_marginLeft="55dp"/>
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/ic_confirmation_number"
+                        android:layout_marginLeft="-250dp"
+                        android:layout_marginTop="-35dp"/>
+
+
+                </android.support.design.widget.TextInputLayout>
+
+
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/sim_no_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:theme="@style/TextLabel">
+
+                    <EditText
+                        android:id="@+id/sim_no"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        android:hint="SIM No"
+                        android:layout_marginLeft="55dp"/>
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/ic_sim_card"
+                        android:layout_marginLeft="-250dp"
+                        android:layout_marginTop="-35dp"/>
+
+
+                </android.support.design.widget.TextInputLayout>
+
+
+
+
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/location_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:theme="@style/TextLabel">
+
+                    <EditText
+                        android:id="@+id/location"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        android:hint="Location"
+                        android:layout_marginLeft="55dp"/>
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/ic_location"
+                        android:layout_marginLeft="-250dp"
+                        android:layout_marginTop="-35dp"/>
+
+
+                </android.support.design.widget.TextInputLayout>
+
+
+
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/service_time_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:theme="@style/TextLabel">
+
+                    <EditText
+                        android:id="@+id/service_time"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        android:hint="Service Time"
+                        android:layout_marginLeft="55dp"/>
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/ic_access_time"
+                        android:layout_marginLeft="-250dp"
+                        android:layout_marginTop="-35dp"/>
+
+
+                </android.support.design.widget.TextInputLayout>
+
+
+
+
+
+
+
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/engineer_name_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:theme="@style/TextLabel">
+
+                    <EditText
+                        android:id="@+id/service_engg_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        android:hint="Service Engineer Name"
+                        android:layout_marginLeft="55dp"/>
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/ic_person"
+                        android:layout_marginLeft="-250dp"
+                        android:layout_marginTop="-35dp"/>
+
+
+                </android.support.design.widget.TextInputLayout>
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/incharge_name_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:theme="@style/TextLabel">
+
+                    <EditText
+                        android:id="@+id/site_incharge_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        android:hint="Site Incharge Name"
+                        android:layout_marginLeft="55dp"/>
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/ic_person_outline"
+                        android:layout_marginLeft="-250dp"
+                        android:layout_marginTop="-35dp"/>
+
+
+                </android.support.design.widget.TextInputLayout>
+
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/authorized_person_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:theme="@style/TextLabel">
+
+                    <EditText
+                        android:id="@+id/authorized_person"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        android:hint="Authorized Person"
+                        android:layout_marginLeft="55dp"/>
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/ic_person_pin"
+                        android:layout_marginLeft="-250dp"
+                        android:layout_marginTop="-35dp"/>
+
+
+                </android.support.design.widget.TextInputLayout>
+
+
+
+
+
+                <Button android:id="@+id/signup"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="Submit"
+                    android:background="@drawable/edit"
+                    android:layout_marginTop="20dp"
+                    android:textColor="@android:color/white"
+                    android:layout_marginRight="100dp"
+                    android:layout_gravity="end"
+                    android:layout_alignParentBottom="true"
+                    />
+
+
+
+
+                <TableRow
+                    android:id="@+id/hr"
+                    android:layout_width="150dp"
+                    android:layout_marginLeft="-250dp"
+                    android:layout_marginTop="70dp"
+                    android:background="#000000"
+                    android:layout_height="1dp"></TableRow>
+
+
+
+
+
+            </LinearLayout>
+
+        </ScrollView>
+
+
+
+    </FrameLayout>
+
+
+
+
+
+
+
+
+</RelativeLayout>
