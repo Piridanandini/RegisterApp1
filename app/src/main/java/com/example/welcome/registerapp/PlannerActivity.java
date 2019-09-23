@@ -20,6 +20,7 @@ public class PlannerActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE); //will hide the title
         getSupportActionBar().hide(); // hide the title bar
+        Toast.makeText(this, "test1", Toast.LENGTH_SHORT).show();
 
 
 
