@@ -11,11 +11,10 @@
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:background="#4e59bf"
+        android:background="@color/flu"
         app:layout_scrollFlags="scroll|enterAlways"
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
-        android:layout_marginTop="40dp"
-        >
+        android:layout_marginTop="10dp">
 
         <ImageButton
             android:layout_width="50dp"
@@ -24,7 +23,7 @@
             android:src="@drawable/ic_arrow_back"
             android:layout_marginTop="-10dp"
             android:layout_marginLeft="-100dp"
-            android:background="#4e59bf"/>
+            android:background="@color/flu"/>
 
 
         <TextView
@@ -34,7 +33,7 @@
             android:text="Installation Form"
             android:layout_marginLeft="150dp"
             android:layout_marginTop="10dp"
-            android:textColor="#FFF"
+            android:textColor="#000"
             android:textSize="25dp"
             android:textStyle="bold" />
 
@@ -47,10 +46,12 @@
         android:id="@+id/simpleTabLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:tabBackground="@color/color"
-        app:tabIndicatorColor="#FFF"
+        app:tabBackground="@color/flu"
+        app:tabIndicatorColor="#000"
         app:tabSelectedTextColor="#000"
         app:tabTextColor="#FFF"
+        app:tabMode="fixed"
+        app:tabGravity="fill"
        />
 
 

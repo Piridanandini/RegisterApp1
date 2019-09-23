@@ -3,8 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#000"
     >
-
 
 
 
@@ -15,6 +15,7 @@
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
         >
 
 
@@ -52,7 +53,8 @@
                         android:layout_height="wrap_content"
                         android:singleLine="true"
                         android:hint="Service Date"
-                        android:layout_marginLeft="55dp"/>
+                        android:layout_marginLeft="55dp"
+                        android:textColor="#FFF"/>
 
 
                 </android.support.design.widget.TextInputLayout>
@@ -80,7 +82,8 @@
                         android:layout_height="wrap_content"
                         android:singleLine="true"
                         android:hint="Vehicle No"
-                        android:layout_marginLeft="55dp"/>
+                        android:layout_marginLeft="55dp"
+                        android:textColor="#FFF"/>
 
 
                 </android.support.design.widget.TextInputLayout>
@@ -101,7 +104,8 @@
                         android:layout_height="wrap_content"
                         android:singleLine="true"
                         android:hint="Asset Code"
-                        android:layout_marginLeft="55dp"/>
+                        android:layout_marginLeft="55dp"
+                        android:textColor="#FFF"/>
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
@@ -127,7 +131,8 @@
                         android:layout_height="wrap_content"
                         android:singleLine="true"
                         android:hint="Device Name"
-                        android:layout_marginLeft="55dp"/>
+                        android:layout_marginLeft="55dp"
+                        android:textColor="#FFF"/>
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
@@ -153,7 +158,8 @@
                         android:layout_height="wrap_content"
                         android:singleLine="true"
                         android:hint="Device IMEI No"
-                        android:layout_marginLeft="55dp"/>
+                        android:layout_marginLeft="55dp"
+                        android:textColor="#FFF"/>
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
@@ -181,7 +187,8 @@
                         android:layout_height="wrap_content"
                         android:singleLine="true"
                         android:hint="SIM Name"
-                        android:layout_marginLeft="55dp"/>
+                        android:layout_marginLeft="55dp"
+                        android:textColor="#FFF"/>
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
@@ -208,7 +215,8 @@
                         android:layout_height="wrap_content"
                         android:singleLine="true"
                         android:hint="SIM IMEI No"
-                        android:layout_marginLeft="55dp"/>
+                        android:layout_marginLeft="55dp"
+                        android:textColor="#FFF"/>
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
@@ -233,7 +241,8 @@
                         android:layout_height="wrap_content"
                         android:singleLine="true"
                         android:hint="SIM No"
-                        android:layout_marginLeft="55dp"/>
+                        android:layout_marginLeft="55dp"
+                        android:textColor="#FFF"/>
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
@@ -260,7 +269,8 @@
                         android:layout_height="wrap_content"
                         android:singleLine="true"
                         android:hint="Location"
-                        android:layout_marginLeft="55dp"/>
+                        android:layout_marginLeft="55dp"
+                        android:textColor="#FFF"/>
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
@@ -286,7 +296,8 @@
                         android:layout_height="wrap_content"
                         android:singleLine="true"
                         android:hint="Installation/Service Time"
-                        android:layout_marginLeft="55dp"/>
+                        android:layout_marginLeft="55dp"
+                        android:textColor="#FFF"/>
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
@@ -316,7 +327,7 @@
                 <Button
                     android:id="@+id/btnChoose"
                     android:text="Vehicle image"
-                    android:textColor="#FFF"
+                    android:textColor="#000"
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="45dp"
@@ -331,7 +342,7 @@
                 <Button
                     android:id="@+id/btnAdd"
                     android:text="Add"
-                    android:textColor="#FFF"
+                    android:textColor="#000"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@+id/imageView"
@@ -354,7 +365,8 @@
                         android:layout_height="wrap_content"
                         android:singleLine="true"
                         android:hint="Service Engineer Name"
-                        android:layout_marginLeft="55dp"/>
+                        android:layout_marginLeft="55dp"
+                        android:textColor="#FFF"/>
 
                     <ImageView
                         android:layout_width="match_parent"
@@ -378,7 +390,8 @@
                         android:layout_height="wrap_content"
                         android:singleLine="true"
                         android:hint="Site Incharge Name"
-                        android:layout_marginLeft="55dp"/>
+                        android:layout_marginLeft="55dp"
+                        android:textColor="#FFF"/>
 
                     <ImageView
                         android:layout_width="match_parent"
@@ -403,7 +416,8 @@
                         android:layout_height="wrap_content"
                         android:singleLine="true"
                         android:hint="Authorized Person"
-                        android:layout_marginLeft="55dp"/>
+                        android:layout_marginLeft="55dp"
+                        android:textColor="#FFF"/>
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
@@ -424,10 +438,10 @@
                     android:text="Submit"
                     android:background="@drawable/edit"
                     android:layout_marginTop="20dp"
-                    android:textColor="@android:color/white"
+                    android:textColor="#000"
                     android:layout_marginRight="100dp"
                     android:layout_gravity="end"
-                    android:layout_alignParentBottom="true"
+                    android:layout_marginBottom="300dp"
                     />
 
 
@@ -448,6 +462,7 @@
             </LinearLayout>
 
         </ScrollView>
+
 
 
 

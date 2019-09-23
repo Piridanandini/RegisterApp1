@@ -11,12 +11,14 @@
 
     <style name="TextLabel" parent="Widget.Design.TextInputLayout">
         <!-- Hint color and label color in FALSE state -->
-        <item name="android:textColorHint">@color/color</item>
-        <item name="android:colorBackgroundCacheHint">@color/color</item>
-        <item name="android:cacheColorHint">@color/color</item>
-        <item name="colorControlNormal">@color/color</item>
-        <item name="colorControlActivated">@color/color</item>
-        <item name="colorControlHighlight">@color/color</item>
+        <item name="android:textColorHint">@color/flu</item>
+        <item name="android:colorBackgroundCacheHint">@color/flu</item>
+        <item name="android:cacheColorHint">@color/flu</item>
+        <item name="colorControlNormal">@color/flu</item>
+        <item name="colorControlActivated">@color/flu</item>
+        <item name="colorControlHighlight">@color/flu</item>
+        <item name="android:textColor">@color/white</item>
+
 
         <!-- Label color in TRUE state and bar color FALSE and TRUE State -->
 

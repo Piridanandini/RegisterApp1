@@ -6,14 +6,26 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class SignupActivity extends AppCompatActivity {
+import android.content.Intent;
+import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
+import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
+import android.widget.Button;
 
+public class SignupActivity extends AppCompatActivity {
+    Button button;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        requestWindowFeature(Window.FEATURE_NO_TITLE); //will hide the title
+        getSupportActionBar().hide(); // hide the title bar
+        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_signup);
 
-       Button button = (Button)findViewById(R.id.add_device);
+        Button button = (Button)findViewById(R.id.Loginbutton);
         // set corner radius value
         // Implement onClickListener event on CardView
         button.setOnClickListener(new View.OnClickListener() {
@@ -21,7 +33,7 @@ public class SignupActivity extends AppCompatActivity {
             public void onClick(View view) {
                 final View.OnClickListener context = this;
 
-                Intent intent = new Intent(SignupActivity.this,AdddeviceActivity.class);
+                Intent intent = new Intent(SignupActivity.this,HomeActivity.class);
                 startActivity(intent);
 
             }
@@ -29,19 +41,6 @@ public class SignupActivity extends AppCompatActivity {
 
 
 
-
-        Button button1 = (Button)findViewById(R.id.install);
-        // set corner radius value
-        // Implement onClickListener event on CardView
-        button1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                final View.OnClickListener context = this;
-
-                Intent intent = new Intent(SignupActivity.this,MainActivity.class);
-                startActivity(intent);
-
-            }
-        });
     }
 }
+

@@ -4,4 +4,12 @@
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
     <color name="color">#4e59bf</color>
+    <color name="flu">#3ecda8</color>
+    <color name="white">#FFF</color>
+    <color name="fluu">#00ffff</color>
+    <color name="col1">#847d7d</color>
+    <color name="grey">#D3D3D2</color>
+    <color name="black">#000</color>
+
+
 </resources>
