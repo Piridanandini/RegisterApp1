@@ -1,69 +1,68 @@
 package com.example.welcome.registerapp;
 
-import android.content.Intent;
-import android.os.Handler;
-import android.support.v7.app.AppCompatActivity;
+import android.app.DatePickerDialog;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.text.InputType;
 import android.view.View;
-import android.view.Window;
-import android.view.WindowManager;
 import android.widget.Button;
-import android.widget.ImageButton;
-import android.widget.Toast;
+import android.widget.DatePicker;
+import android.widget.EditText;
+import android.widget.TextView;
+import java.util.Calendar;
 
 public class PlannerActivity extends AppCompatActivity {
-    ImageButton button;
-
-    @Override
-    protected void onCreate(Bundle savedInstanceState)
-    {
-        super.onCreate(savedInstanceState);
-        requestWindowFeature(Window.FEATURE_NO_TITLE); //will hide the title
-        getSupportActionBar().hide(); // hide the title bar
-        Toast.makeText(this, "test1", Toast.LENGTH_SHORT).show();
-
-
-
-
-
-        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
-                WindowManager.LayoutParams.FLAG_FULLSCREEN);
-        setContentView(R.layout.activity_planner);
-
-
-
-        button = findViewById(R.id.PlannerBack);
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i = new Intent(getApplicationContext(), HomeActivity.class);
-                startActivity(i);
-            }
-
-        });
+       DatePickerDialog picker;
+        EditText eText;
+        Button btnGet;
+        TextView tvw;
+        @Override
+        protected void onCreate(Bundle savedInstanceState) {
+            super.onCreate(savedInstanceState);
+            setContentView(R.layout.activity_planner);
+            tvw=(TextView)findViewById(R.id.textView1);
+            eText=(EditText) findViewById(R.id.editText1);
+            eText.setInputType(InputType.TYPE_NULL);
+            eText.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    final Calendar cldr = Calendar.getInstance();
+                    int day = cldr.get(Calendar.DAY_OF_MONTH);
+                    int month = cldr.get(Calendar.MONTH);
+                    int year = cldr.get(Calendar.YEAR);
+                    // date picker dialog
+                    picker = new DatePickerDialog(PlannerActivity.this,
+                            new DatePickerDialog.OnDateSetListener() {
+                                @Override
+                                public void onDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth) {
+                                    eText.setText(dayOfMonth + "/" + (monthOfYear + 1) + "/" + year);
+                                }
+                            }, year, month, day);
+                    picker.show();
 
 
-    }
 
-    boolean doubleBackToExitPressedOnce = false;
 
-    @Override
-    public void onBackPressed() {
-        if (doubleBackToExitPressedOnce) {
-            super.onBackPressed();
-            return;
+
+
+
+                }
+            });
+            btnGet=(Button)findViewById(R.id.button1);
+            btnGet.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    tvw.setText("Selected Date: "+ eText.getText());
+                }
+            });
+
         }
-
-        this.doubleBackToExitPressedOnce = true;
-        Toast.makeText(this, "Please click BACK again to exit", Toast.LENGTH_SHORT).show();
-
-        new Handler().postDelayed(new Runnable() {
-
-            @Override
-            public void run() {
-                doubleBackToExitPressedOnce=false;
-            }
-        }, 2000);
     }
 
-}
+
+
+
+
+
+
+

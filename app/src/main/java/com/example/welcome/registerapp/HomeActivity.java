@@ -1,16 +1,12 @@
 package com.example.welcome.registerapp;
 
-import android.content.DialogInterface;
 import android.content.Intent;
-import android.os.Handler;
-import android.support.v7.app.AlertDialog;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.CardView;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
-import android.widget.Toast;
 
 public class HomeActivity extends AppCompatActivity {
 
@@ -67,40 +63,32 @@ public class HomeActivity extends AppCompatActivity {
 
             }
         });
-    }
 
-    boolean doubleBackToExitPressedOnce = false;
 
-    @Override
-    public void onBackPressed() {
-        if (doubleBackToExitPressedOnce) {
-            super.onBackPressed();
-            return;
-        }
-
-        this.doubleBackToExitPressedOnce = true;
-        Toast.makeText(this, "Please click BACK again to exit", Toast.LENGTH_SHORT).show();
-
-        new Handler().postDelayed(new Runnable() {
-
+        CardView cardView3 = (CardView) findViewById(R.id.card5);
+        // set corner radius value
+        // Implement onClickListener event on CardView
+        cardView3.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void run() {
-                doubleBackToExitPressedOnce=false;
+            public void onClick(View view) {
+                final View.OnClickListener context = this;
+
+                Intent intent = new Intent(HomeActivity.this, SupportActivity.class);
+                startActivity(intent);
+
             }
-        }, 2000);
+        });
+
+
+
+
+
+
+
+
+
+
     }
-
-
-
-
-
-
-
-
-
-
-
-
 }
 
 

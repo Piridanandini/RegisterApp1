@@ -23,15 +23,36 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+            <intent-filter>
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <action android:name="android.intent.action.SEND" />
+                <action android:name="android.intent.action.SENDTO" />
+
+                <data android:scheme="sms" />
+                <data android:scheme="smsto" />
+                <data android:scheme="mms" />
+                <data android:scheme="mmsto" />
+            </intent-filter>
         </activity>
         <activity android:name=".MainActivity" />
-        <activity android:name=".AdddeviceActivity" />
+        <activity
+            android:name=".AdddeviceActivity"
+            android:noHistory="true" />
         <activity android:name=".SignupActivity" />
-        <activity android:name=".TabActivity" />
-        <activity android:name=".Tab2Activity" />
+        <activity
+            android:name=".TabActivity"
+            android:noHistory="true" />
+        <activity
+            android:name=".Tab2Activity"
+            android:noHistory="true" />
         <activity android:name=".HomeActivity" />
-        <activity android:name=".PlannerActivity" />
-        <activity android:name=".LogoutActivity"></activity>
+        <activity android:name=".PlannerActivity"
+            android:noHistory="true"/>
+        <activity android:name=".LogoutActivity" />
+        <activity android:name=".SupportActivity"
+            android:noHistory="true"></activity>
     </application>
 
 </manifest>
