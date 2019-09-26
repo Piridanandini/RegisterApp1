@@ -1,10 +1,8 @@
 package com.example.welcome.registerapp;
 
-import android.content.SharedPreferences;
-import android.os.Message;
-import android.support.v7.app.AppCompatActivity;
+import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
+import android.support.v7.app.AppCompatActivity;
 import android.widget.Button;
 
 public class LogoutActivity extends AppCompatActivity {
@@ -15,8 +13,12 @@ public class LogoutActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_logout);
-
-
+        Intent loginscreen = new Intent(this, SignupActivity.class);
+        loginscreen.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        startActivity(loginscreen);
+        this.finish();
 
     }
-}
+        }
+
+

@@ -47,12 +47,18 @@
         <activity
             android:name=".Tab2Activity"
             android:noHistory="true" />
-        <activity android:name=".HomeActivity" />
+        <activity android:name=".HomeActivity"
+            />
         <activity android:name=".PlannerActivity"
             android:noHistory="true"/>
         <activity android:name=".LogoutActivity" />
+
         <activity android:name=".SupportActivity"
-            android:noHistory="true"></activity>
+            android:noHistory="true">
+
+        </activity>
     </application>
 
 </manifest>
+
+

@@ -2,14 +2,13 @@ package com.example.welcome.registerapp;
 
 import android.content.Intent;
 import android.graphics.PixelFormat;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.Window;
 import android.view.WindowManager;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
-import android.widget.TextView;
 
 public class SplashActivity extends AppCompatActivity {
     public void onAttachedToWindow() {
@@ -28,14 +27,14 @@ public class SplashActivity extends AppCompatActivity {
         setContentView( R.layout.activity_splash);
 
         final ImageView splash_image = (ImageView) findViewById(R.id.splash_image);
-        final Animation animation_1 = AnimationUtils.loadAnimation(getApplicationContext(), R.anim.rotate);
+
         final Animation animation_2 = AnimationUtils.loadAnimation(getApplicationContext(),R.anim.fade_in);
 
-        animation_1.reset();
+
         animation_2.reset();
 
         splash_image.clearAnimation();
-        splash_image.startAnimation(animation_1);
+        splash_image.startAnimation(animation_2);
 
 
 
