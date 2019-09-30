@@ -13,19 +13,28 @@ import android.widget.ListView;
 import android.widget.SearchView;
 import com.example.welcome.registerapp.R;
 import com.example.welcome.registerapp.VehicleNames;
+import com.example.welcome.registerapp.database.installation;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
 import java.util.ArrayList;
 
 
-public class SecondFragment extends Fragment implements SearchView.OnQueryTextListener {
-    ListView list;
+public class SecondFragment extends Fragment {
+    ListView installationList;
     ListViewAdapter adapter;
+    DatabaseReference installation_db;
     SearchView editsearch;
     String[] vehicleNameList;
-    ArrayList<VehicleNames> arraylist = new ArrayList<VehicleNames>();
+    ArrayList<installation> arrayList = new ArrayList<installation>();
+
 
 
     public SecondFragment() {
-// Required empty public constructor
+
     }
 
     @Override
@@ -36,36 +45,44 @@ public class SecondFragment extends Fragment implements SearchView.OnQueryTextLi
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-// Inflate the layout for this fragment
+
+        installation_db = FirebaseDatabase.getInstance().getReference("installation");
+
         View view = inflater.inflate(R.layout.fragment_second, container, false);
-        list = (ListView) view.findViewById(R.id.listview);
-        vehicleNameList = new String[]{"101", "102", "301", "501", "601", "801", "999", "788", "865", "133", "789", "878"};
-        for (int i = 0; i < vehicleNameList.length; i++) {
-            VehicleNames vehicleNames = new VehicleNames(vehicleNameList[i]);
-            // Binds all strings into an array
-            arraylist.add(vehicleNames);
-            adapter = new ListViewAdapter(getActivity(), arraylist);
-            list.setAdapter(adapter);
-            editsearch = (SearchView) view.findViewById(R.id.search);
-            editsearch.setOnQueryTextListener(this);
-        }
+        installationList = (ListView) view.findViewById(R.id.listView);
+
+        installation_db.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                //clearing the previous artist list
+                arrayList.clear();
+                //iterating through all the nodes
+                for (DataSnapshot postSnapshot : dataSnapshot.getChildren()) {
+                    //getting artist
+                    installation install = postSnapshot.getValue(installation.class);
+                    //adding artist to the list
+                    arrayList.add(install);
+                }
+
+                //creating adapter
+                installationListView Adapter = new installationListView(getActivity(), arrayList);
+                //attaching adapter to the listview
+                installationList.setAdapter(Adapter);
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        });
+
         return view;
 
 
     }
 
 
-    @Override
-    public boolean onQueryTextSubmit(String query) {
-        return false;
-    }
 
-    @Override
-    public boolean onQueryTextChange(String newText) {
-        String text = newText;
-        adapter.filter(text);
-        return false;
-    }
 }
 
 

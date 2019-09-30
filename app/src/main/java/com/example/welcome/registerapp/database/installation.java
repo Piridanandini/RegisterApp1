@@ -12,6 +12,10 @@ public class installation {
     private String device_name;
     private String device_imei_no;
 
+    public installation() {
+        //required constructor
+    }
+
     public installation(String installationId, String vehicle_type, String vehicle_no, String device_name, String device_imei_no, String sim_name, String sim_imei_no, String sim_no, String location, String service_time, String service_engineer_name, String site_incharge_name, String authorised_person) {
         this.installationId = installationId;
         this.vehicle_type = vehicle_type;

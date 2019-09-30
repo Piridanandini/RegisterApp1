@@ -66,7 +66,6 @@ public class phone_login_activity extends AppCompatActivity {
         if (FirebaseAuth.getInstance().getCurrentUser() != null) {
             Intent intent = new Intent(this, profile_activity.class);
             intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-
             startActivity(intent);
         }
     }
