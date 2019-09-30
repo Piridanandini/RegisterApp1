@@ -211,7 +211,7 @@ public class profile_activity extends AppCompatActivity {
     }
 
     public void click_fun(View view) {
-        FirebaseAuth.getInstance().signOut();
+//        FirebaseAuth.getInstance().signOut();
         finish();
         startActivity(new Intent(this, switch_email_phone_activity.class));
     }

@@ -61,6 +61,7 @@
             android:name=".SupportActivity"
             android:noHistory="true" />
         <activity android:name=".database.add_installations" />
+        <activity android:name=".authentication.VerifyPhoneActivity" />
     </application>
 
 </manifest>

@@ -23,7 +23,7 @@ public class switch_email_phone_activity extends AppCompatActivity {
     }
 
     public void phone_button(View view) {
-        Intent intent = new Intent(this, HomeActivity.class);
+        Intent intent = new Intent(this, phone_login_activity.class);
         startActivity(intent);
 
     }
