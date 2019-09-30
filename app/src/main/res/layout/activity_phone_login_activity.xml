@@ -46,6 +46,7 @@
             android:textColorHint="@color/grey"
             android:background="@drawable/editt"
             android:layout_margin="40dp"
+            android:gravity="center"
 
             />
 
