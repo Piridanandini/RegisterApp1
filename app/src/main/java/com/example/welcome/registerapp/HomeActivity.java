@@ -96,6 +96,21 @@ public class HomeActivity extends AppCompatActivity {
         });
 
 
+        CardView cardView5 = (CardView) findViewById(R.id.card4);
+        // set corner radius value
+        // Implement onClickListener event on CardView
+        cardView5.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                final View.OnClickListener context = this;
+
+                Intent intent = new Intent(HomeActivity.this,Tab3Activity.class);
+                startActivity(intent);
+
+            }
+        });
+
+
 
 
 

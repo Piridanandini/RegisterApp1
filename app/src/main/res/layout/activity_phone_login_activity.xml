@@ -1,67 +1,110 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".authentication.phone_login_activity">
+    tools:context=".authentication.phone_login_activity"
+    android:background="@color/black"
+    android:orientation="vertical">
 
-    <RelativeLayout
-        android:id="@+id/relativeLayout"
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:background="@color/colorPrimary"/>
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="match_parent"
-        android:layout_height="120dp"
-        android:layout_below="@id/relativeLayout"
-        android:layout_marginTop="-50dp" />
+
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/imageView"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="150dp"
+        android:layout_marginLeft="40dp"
         android:text="@string/may_i_ask_you_phone_number"
         android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
-        android:textColor="@color/colorPrimary" />
+        android:textColor="@color/white" />
+
+
+
 
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/textView"
-        android:orientation="horizontal"
-        android:padding="15dp">
+        android:orientation="vertical"
+         >
 
-        <Spinner
-            android:id="@+id/spinnerCountries"
-            android:layout_width="120dp"
-            android:layout_height="wrap_content" />
+
 
         <EditText
             android:id="@+id/editTextPhone"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="2"
+            android:layout_width="300dp"
+            android:layout_height="45dp"
             android:digits="0123456789"
             android:hint="@string/enter_your_number"
-            android:maxLength="10" />
+            android:maxLength="10"
+            android:textColor="@color/black"
+            android:textColorHint="@color/grey"
+            android:background="@drawable/editt"
+            android:layout_margin="40dp"
+
+            />
+
+        <Spinner
+            android:id="@+id/spinnerCountries"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:digits="0123456789"
+            android:maxLength="10"
+            android:textColor="@color/white"
+            android:textColorHint="@color/flu"
+            android:background="@drawable/editt"
+            android:layout_marginLeft="40dp"
+            />
+
+
+
+
+
 
     </LinearLayout>
 
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:padding="50dp">
+
     <Button
-        android:id="@+id/buttonContinue"
-        android:layout_width="150dp"
+        android:layout_weight="1"
+        android:id="@+id/buttonCancle"
+        android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:layout_below="@id/linearLayout"
-        android:layout_centerHorizontal="true"
-        android:background="@color/colorPrimary"
-        android:text="Continue"
+        android:background="@drawable/canceledit"
+        android:text="Cancel"
         android:textAllCaps="false"
-        android:textColor="#ffffff" />
+        android:textColor="@color/white"
+        android:layout_margin="1dp"
+        />
 
-</RelativeLayout>
+
+    <Button
+        android:layout_weight="1"
+        android:id="@+id/buttonContinue"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/linearLayout"
+        android:background="@drawable/applyedit"
+        android:text="Apply"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:layout_marginLeft="20dp"
+
+        />
+    </LinearLayout>
+
+</LinearLayout>

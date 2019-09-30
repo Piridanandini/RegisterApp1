@@ -321,7 +321,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="55dp"
                         android:layout_marginTop="25dp"
-                        android:src="@drawable/logout"
+                        android:src="@drawable/set1"
 
                         />
 
@@ -331,7 +331,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="40dp"
                         android:layout_marginTop="100dp"
-                        android:text="LOGOUT"
+                        android:text="SETTINGS"
                         android:textColor="#fff"
                         android:textSize="18dp"
                         />

@@ -18,12 +18,12 @@ public class switch_email_phone_activity extends AppCompatActivity {
     }
 
     public void email_button(View view) {
-        Intent intent = new Intent(this, email_login_activity.class);
+        Intent intent = new Intent(this, HomeActivity.class);
         startActivity(intent);
     }
 
     public void phone_button(View view) {
-        Intent intent = new Intent(this, phone_login_activity.class);
+        Intent intent = new Intent(this, HomeActivity.class);
         startActivity(intent);
 
     }

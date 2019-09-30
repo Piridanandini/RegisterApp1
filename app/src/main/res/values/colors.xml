@@ -8,10 +8,11 @@
     <color name="white">#FFF</color>
     <color name="fluu">#00ffff</color>
     <color name="col1">#847d7d</color>
-    <color name="grey">#D3D3D2</color>
+    <color name="grey">#AFAFAF</color>
     <color name="black">#000</color>
     <color name="colorLight">#FFFFFF</color>
     <color name="ray">#0096AD</color>
+    <color name="skyblue">#00CCFF</color>
 
 
 </resources>

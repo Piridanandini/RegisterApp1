@@ -12,12 +12,13 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.ViewFlipper;
 
+import com.example.welcome.registerapp.authentication.phone_login_activity;
 import com.example.welcome.registerapp.authentication.switch_email_phone_activity;
 
 public class SignupActivity extends AppCompatActivity {
 
         private ViewFlipper simpleViewFlipper;
-        int[] images = {R.drawable.carflipone, R.drawable.carflip2,R.drawable.carflip3};     // array of images
+        int[] images = {R.drawable.carflip2, R.drawable.img,R.drawable.carflip3};     // array of images
 
         @Override
         protected void onCreate(Bundle savedInstanceState) {
@@ -46,7 +47,7 @@ public class SignupActivity extends AppCompatActivity {
             simpleViewFlipper.setOutAnimation(out);
 
             // set interval time for flipping between views
-            simpleViewFlipper.setFlipInterval(1000);
+            simpleViewFlipper.setFlipInterval(2000);
             // set auto start for flipping between views
             simpleViewFlipper.setAutoStart(true);
 
@@ -58,7 +59,7 @@ public class SignupActivity extends AppCompatActivity {
                 @Override
                 public void onClick(View view) {
                     final View.OnClickListener context = this;
-                    Intent intent = new Intent(SignupActivity.this, switch_email_phone_activity.class);
+                    Intent intent = new Intent(SignupActivity.this, phone_login_activity.class);
                     startActivity(intent);
 
                 }

@@ -29,9 +29,10 @@
     <string name="welcome_to_your_profile">Welcome to Your Profile</string>
     <string name="logout">Logout</string>
     <string name="may_i_ask_you_phone_number">May I ask you phone number?</string>
-    <string name="enter_your_number">enter your number</string>
+    <string name="enter_your_number">  enter your number  </string>
     <string name="wait_for_the_OTP">Wait for the code I sent you…</string>
     <string name="i_sent_you_a_code_it_will_be_detected_automatically_but_if_it_is_not_detected_you_can_put_it_below_manually_as_well">I sent you a code, it will be detected automatically but if it is not detected you can put it below manually as well</string>
     <string name="otp_will_be_sent_through_messages_and_will_also_be_automatically_detected_if_fails_to_detect_enter_manually">OTP will be sent through messages and will also be automatically detected if fails to detect enter manually</string>
     <string name="enter_code">enter code</string>
+    <string name="enter_your_Country">enter_your_country</string>
 </resources>
