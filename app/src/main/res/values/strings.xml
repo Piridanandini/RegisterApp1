@@ -1,4 +1,37 @@
 <resources>
     <string name="app_name">Trac Insta</string>
     <string name="font_family_thin">sans-serif-thin</string>
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password (optional)</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+    <string name="add_items_to_database">Add Items to Database</string>
+    <string name="sign_out">Sign out</string>
+    <string name="sign_in">Sign In</string>
+    <string name="don_t_have_account_sign_up">Don\'t have account? Sign Up</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="login">Login</string>
+    <string name="save">Save</string>
+    <string name="verified">Verified</string>
+    <string name="enter_display_name">Enter Display Name</string>
+    <string name="tap_on_camera_to_choose_profile_picture">Tap on camera to choose profile picture</string>
+    <string name="email">email</string>
+    <string name="password">password</string>
+    <string name="already_have_an_account_login">Already have an account? Login</string>
+    <string name="title_activity_verify_phone">VerifyPhoneActivity</string>
+    <string name="welcome_to_your_profile">Welcome to Your Profile</string>
+    <string name="logout">Logout</string>
+    <string name="may_i_ask_you_phone_number">May I ask you phone number?</string>
+    <string name="enter_your_number">enter your number</string>
+    <string name="wait_for_the_OTP">Wait for the code I sent you…</string>
+    <string name="i_sent_you_a_code_it_will_be_detected_automatically_but_if_it_is_not_detected_you_can_put_it_below_manually_as_well">I sent you a code, it will be detected automatically but if it is not detected you can put it below manually as well</string>
+    <string name="otp_will_be_sent_through_messages_and_will_also_be_automatically_detected_if_fails_to_detect_enter_manually">OTP will be sent through messages and will also be automatically detected if fails to detect enter manually</string>
+    <string name="enter_code">enter code</string>
 </resources>

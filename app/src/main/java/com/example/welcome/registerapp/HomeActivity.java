@@ -2,11 +2,13 @@ package com.example.welcome.registerapp;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.CardView;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.cardview.widget.CardView;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+
+import com.example.welcome.registerapp.installation.TabActivity;
 
 public class HomeActivity extends AppCompatActivity {
 
@@ -30,7 +32,6 @@ public class HomeActivity extends AppCompatActivity {
 
                 Intent intent = new Intent(HomeActivity.this, TabActivity.class);
                 startActivity(intent);
-
             }
         });
 

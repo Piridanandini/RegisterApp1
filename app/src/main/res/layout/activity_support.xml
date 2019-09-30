@@ -10,7 +10,7 @@
 
 
 
-    <android.support.v7.widget.Toolbar
+    <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
@@ -42,13 +42,13 @@
 
 
 
-    </android.support.v7.widget.Toolbar>
+    </androidx.appcompat.widget.Toolbar>
 
 
 
 
 
-    <android.support.design.widget.TextInputLayout
+    <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -75,9 +75,9 @@
         android:singleLine="true"
         android:textColor="#FFF"
         />
-    </android.support.design.widget.TextInputLayout>
+    </com.google.android.material.textfield.TextInputLayout>
 
-    <android.support.design.widget.TextInputLayout
+    <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/email"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -101,11 +101,11 @@
         android:layout_marginLeft="80dp"
         android:layout_marginRight="50dp"
         android:textColor="#FFF"/>
-    </android.support.design.widget.TextInputLayout>
+    </com.google.android.material.textfield.TextInputLayout>
 
 
 
-    <android.support.design.widget.TextInputLayout
+    <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/phone"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -127,9 +127,9 @@
         android:layout_marginLeft="80dp"
         android:layout_marginRight="50dp"
         android:textColor="#FFF"/>
-    </android.support.design.widget.TextInputLayout>
+    </com.google.android.material.textfield.TextInputLayout>
 
-    <android.support.design.widget.TextInputLayout
+    <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/issue"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -152,10 +152,10 @@
         android:layout_marginLeft="80dp"
         android:layout_marginRight="50dp"
         android:textColor="#FFF"/>
-    </android.support.design.widget.TextInputLayout>
+    </com.google.android.material.textfield.TextInputLayout>
 
 
-    <android.support.design.widget.TextInputLayout
+    <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/priority"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -178,9 +178,9 @@
         android:layout_marginLeft="80dp"
         android:layout_marginRight="50dp"
         android:textColor="#FFF"/>
-    </android.support.design.widget.TextInputLayout>
+    </com.google.android.material.textfield.TextInputLayout>
 
-    <android.support.design.widget.TextInputLayout
+    <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/msg"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -210,7 +210,7 @@
         android:layout_marginLeft="80dp"
         android:layout_marginRight="50dp"
         android:textColor="#FFF"/>
-    </android.support.design.widget.TextInputLayout>
+    </com.google.android.material.textfield.TextInputLayout>
 
 
     <Button

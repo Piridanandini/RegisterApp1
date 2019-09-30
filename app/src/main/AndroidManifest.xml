@@ -17,6 +17,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".authentication.profile_activity"></activity>
+        <activity android:name=".authentication.email_signup_activity" />
+        <activity android:name=".authentication.phone_login_activity" />
+        <activity android:name=".authentication.email_login_activity" />
+        <activity android:name=".authentication.switch_email_phone_activity" />
         <activity android:name=".SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -42,23 +47,20 @@
             android:noHistory="true" />
         <activity android:name=".SignupActivity" />
         <activity
-            android:name=".TabActivity"
+            android:name=".installation.TabActivity"
             android:noHistory="true" />
         <activity
             android:name=".Tab2Activity"
             android:noHistory="true" />
-        <activity android:name=".HomeActivity"
-            />
-        <activity android:name=".PlannerActivity"
-            android:noHistory="true"/>
+        <activity android:name=".HomeActivity" />
+        <activity
+            android:name=".PlannerActivity"
+            android:noHistory="true" />
         <activity android:name=".LogoutActivity" />
-
-        <activity android:name=".SupportActivity"
-            android:noHistory="true">
-
-        </activity>
+        <activity
+            android:name=".SupportActivity"
+            android:noHistory="true" />
+        <activity android:name=".database.add_installations" />
     </application>
 
 </manifest>
-
-

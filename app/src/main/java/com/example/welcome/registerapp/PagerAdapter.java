@@ -3,9 +3,13 @@ package com.example.welcome.registerapp;
 /**
  * Created by welcome on 9/16/2019.
  */
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentStatePagerAdapter;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentStatePagerAdapter;
+
+import com.example.welcome.registerapp.installation.FirstFragment;
+import com.example.welcome.registerapp.installation.SecondFragment;
+import com.example.welcome.registerapp.installation.ThirdFragment;
 
 public class PagerAdapter extends FragmentStatePagerAdapter {
     int mNumOfTabs;

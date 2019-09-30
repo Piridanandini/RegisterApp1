@@ -1,4 +1,4 @@
-package com.example.welcome.registerapp;
+package com.example.welcome.registerapp.installation;
 
 /**
  * Created by welcome on 9/25/2019.
@@ -10,6 +10,10 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
+
+import com.example.welcome.registerapp.R;
+import com.example.welcome.registerapp.VehicleNames;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
