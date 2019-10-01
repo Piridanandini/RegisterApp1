@@ -107,6 +107,7 @@ public class FirstFragment extends Fragment {
                     Service_engineer_name, Site_incharge_name, Authorised_person);
 
             installation_db.child(installationid).setValue(installation);
+            vehicle_type.setText("");
             vehicle_no.setText("");
             device_name.setText("");
             device_imei_no.setText("");

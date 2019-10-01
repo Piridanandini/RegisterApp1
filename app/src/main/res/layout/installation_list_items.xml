@@ -20,6 +20,7 @@
         android:layout_marginTop="20dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
+        android:outlineAmbientShadowColor="#646464"
         android:background="@drawable/custom_item_layout">
 
 
@@ -51,16 +52,15 @@
                     android:textSize="10dp" />
 
 
-
                 <TextView
                     android:id="@+id/textView2"
-                    android:layout_width="match_parent"
+                    android:layout_width="128dp"
                     android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
                     android:layout_marginTop="30dp"
-                    android:textColor="@color/white"
                     android:text=""
-                    android:textSize="15dp"
-                    android:layout_marginLeft="10dp"/>
+                    android:textColor="@color/white"
+                    android:textSize="15dp" />
 
             </com.google.android.material.card.MaterialCardView>
 
@@ -80,9 +80,19 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
-                    android:text="vehicle name:"
+                    android:text="vehicle Type:"
                     android:textColor="#fff"
                     android:textSize="10dp" />
+
+                <TextView
+                    android:id="@+id/textView6"
+                    android:layout_width="136dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="30dp"
+                    android:text=""
+                    android:textColor="@color/white"
+                    android:textSize="15dp" />
 
             </com.google.android.material.card.MaterialCardView>
 
@@ -117,6 +127,16 @@
                     android:textColor="#fff"
                     android:textSize="10dp" />
 
+                <TextView
+                    android:id="@+id/textView7"
+                    android:layout_width="129dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="30dp"
+                    android:text=""
+                    android:textColor="@color/white"
+                    android:textSize="15dp" />
+
 
             </com.google.android.material.card.MaterialCardView>
 
@@ -132,15 +152,24 @@
                 app:cardBackgroundColor="#454F63">
 
 
-
                 <TextView
                     android:id="@+id/textView5"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
-                    android:text="Device no:"
+                    android:text="Owner name:"
                     android:textColor="#fff"
                     android:textSize="10dp" />
+
+                <TextView
+                    android:id="@+id/textView8"
+                    android:layout_width="134dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="30dp"
+                    android:text=""
+                    android:textColor="@color/white"
+                    android:textSize="15dp" />
 
             </com.google.android.material.card.MaterialCardView>
 

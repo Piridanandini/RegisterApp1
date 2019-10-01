@@ -29,9 +29,15 @@ public class installationListView extends ArrayAdapter<installation> {
     public View getView(int position, View convertView, ViewGroup parent) {
         LayoutInflater inflater = context.getLayoutInflater();
         View listViewItem = inflater.inflate(R.layout.installation_list_items, null, true);
-        TextView textViewName =  listViewItem.findViewById(R.id.textView2);
+        TextView textViewNo=  listViewItem.findViewById(R.id.textView2);
+        TextView vehicleName = listViewItem.findViewById(R.id.textView6);
+        TextView location = listViewItem.findViewById(R.id.textView7);
+        TextView ownerName = listViewItem.findViewById(R.id.textView8);
         installation install = installationList.get(position);
-        textViewName.setText(install.getVehicle_no());
+        textViewNo.setText(install.getVehicle_no());
+        vehicleName.setText(install.getVehicle_type());
+        location.setText(install.getLocation());
+        ownerName.setText(install.getAuthorised_person());
         return listViewItem;
     }
 
