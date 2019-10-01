@@ -3,14 +3,135 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    >
 
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="TextView"
-        android:textColor="#FC5B5B"
-        android:textSize="30sp" />
+
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="400dp"
+        android:layout_height="230dp"
+        app:cardBackgroundColor="#2A2E43"
+        app:cardCornerRadius="25dp"
+        android:elevation="8dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/custom_item_layout">
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="2"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="10dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+                android:background="@drawable/custom_item_layout"
+                app:cardCornerRadius="20dp"
+                android:layout_margin="2dp"
+                app:cardBackgroundColor="#454F63">
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:text="vehicle name:"
+                    android:textColor="#fff"
+                    android:textSize="20dp" />
+
+
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="50dp"
+                    android:textColor="@color/white"
+                    android:text="Bike"
+                    android:textSize="25dp"
+                    android:layout_marginLeft="10dp"/>
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="10dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+                android:background="@drawable/custom_item_layout"
+                app:cardCornerRadius="20dp"
+                android:layout_margin="2dp"
+                app:cardBackgroundColor="#454F63">
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:text="vehicle no:"
+                    android:textColor="#fff"
+                    android:textSize="20dp" />
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:weightSum="2"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+
+            <com.google.android.material.card.MaterialCardView
+
+                android:layout_width="400dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+                android:layout_marginTop="110dp"
+                android:background="@drawable/custom_item_layout"
+                app:cardCornerRadius="20dp"
+                app:cardBackgroundColor="#454F63">
+
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp"
+                    android:text="Location:"
+                    android:textColor="#fff"
+                    android:textSize="20dp" />
+
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+        </LinearLayout>
+
+
+
+
+
+
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+
+
+
 </LinearLayout>
