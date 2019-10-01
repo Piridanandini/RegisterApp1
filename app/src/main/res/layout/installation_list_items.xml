@@ -12,8 +12,8 @@
 
 
     <com.google.android.material.card.MaterialCardView
-        android:layout_width="400dp"
-        android:layout_height="260dp"
+        android:layout_width="350dp"
+        android:layout_height="240dp"
         app:cardBackgroundColor="#2A2E43"
         app:cardCornerRadius="25dp"
         android:elevation="8dp"
@@ -34,7 +34,7 @@
 
             <com.google.android.material.card.MaterialCardView
                 android:layout_width="190dp"
-                android:layout_height="80dp"
+                android:layout_height="60dp"
                 android:background="@drawable/custom"
                 app:cardCornerRadius="20dp"
                 android:layout_marginTop="20dp"
@@ -67,8 +67,8 @@
 
 
             <com.google.android.material.card.MaterialCardView
-                android:layout_width="150dp"
-                android:layout_height="80dp"
+                android:layout_width="110dp"
+                android:layout_height="60dp"
                 android:background="@drawable/custom"
                 app:cardCornerRadius="20dp"
                 android:layout_marginLeft="20dp"
@@ -100,7 +100,7 @@
             <com.google.android.material.card.MaterialCardView
 
                 android:layout_width="190dp"
-                android:layout_height="80dp"
+                android:layout_height="60dp"
                 android:layout_marginTop="130dp"
                 android:background="@drawable/custom"
                 app:cardCornerRadius="20dp"
@@ -112,7 +112,7 @@
                     android:id="@+id/textView4"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_margin="15dp"
+                    android:layout_margin="10dp"
                     android:text="Location:"
                     android:textColor="#fff"
                     android:textSize="15dp" />
@@ -123,13 +123,15 @@
 
 
             <com.google.android.material.card.MaterialCardView
-                android:layout_width="150dp"
-                android:layout_height="80dp"
+                android:layout_width="110dp"
+                android:layout_height="60dp"
                 android:background="@drawable/custom"
                 app:cardCornerRadius="20dp"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="130dp"
                 app:cardBackgroundColor="#454F63">
+
+
 
                 <TextView
                     android:id="@+id/textView5"
