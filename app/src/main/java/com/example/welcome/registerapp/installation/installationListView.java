@@ -13,9 +13,7 @@ import com.example.welcome.registerapp.database.installation;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by Belal on 2/26/2017.
- */
+
 
 public class installationListView extends ArrayAdapter<installation> {
     private Activity context;

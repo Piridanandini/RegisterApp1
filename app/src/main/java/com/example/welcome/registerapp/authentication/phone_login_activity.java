@@ -11,6 +11,7 @@ import android.widget.Spinner;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.welcome.registerapp.HomeActivity;
 import com.example.welcome.registerapp.R;
 import com.google.firebase.auth.FirebaseAuth;
 
@@ -51,7 +52,7 @@ public class phone_login_activity extends AppCompatActivity {
 
                 String phoneNumber = "+" + code + number;
 
-                Intent intent = new Intent(phone_login_activity.this, VerifyPhoneActivity.class);
+                Intent intent = new Intent(phone_login_activity.this, HomeActivity.class);
                 intent.putExtra("phonenumber", phoneNumber);
                 startActivity(intent);
 

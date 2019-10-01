@@ -6,34 +6,11 @@
     android:layout_height="match_parent">
 
 
-    <com.google.android.material.card.MaterialCardView
-        android:layout_width="300dp"
-        android:layout_height="300dp"
-        app:cardBackgroundColor="@color/grey"
-        app:cardCornerRadius="25dp"
-        android:elevation="8dp"
-        android:layout_margin="50dp">
-
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="Hello"
-            android:layout_margin="50dp"
-            android:textSize="50dp"
-            android:textStyle="bold"
-            android:textColor="@color/black"/>
-
-    </com.google.android.material.card.MaterialCardView>
-
-
-
-
     <TextView
         android:id="@+id/textView2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="TextView"
-        android:textColor="#FFFFFF"
+        android:textColor="#FC5B5B"
         android:textSize="30sp" />
 </LinearLayout>

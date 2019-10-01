@@ -107,17 +107,17 @@ public class FirstFragment extends Fragment {
                     Service_engineer_name, Site_incharge_name, Authorised_person);
 
             installation_db.child(installationid).setValue(installation);
-//            vehicle_no.setText("1");
-//            device_name.setText("1");
-//            device_imei_no.setText("1");
-//            sim_name.setText("1");
-//            sim_imei_no.setText("1");
-//            sim_no.setText("1");
-//            location.setText("1");
-//            service_time.setText("1");
-//            service_engineer_name.setText("1");
-//            site_incharge_name.setText("1");
-//            authorised_person.setText("1");
+            vehicle_no.setText("");
+            device_name.setText("");
+            device_imei_no.setText("");
+            sim_name.setText("");
+            sim_imei_no.setText("");
+            sim_no.setText("");
+            location.setText("");
+            service_time.setText("");
+            service_engineer_name.setText("");
+            site_incharge_name.setText("");
+            authorised_person.setText("");
 
             Toast.makeText(getActivity(), "Installation details uploaded successfully", Toast.LENGTH_SHORT).show();
 
