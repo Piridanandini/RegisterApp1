@@ -1,7 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
     android:layout_height="match_parent">
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        app:cardBackgroundColor="@color/grey"
+        app:cardCornerRadius="25dp"
+        android:elevation="8dp"
+        android:layout_margin="50dp">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Hello"
+            android:layout_margin="50dp"
+            android:textSize="50dp"
+            android:textStyle="bold"
+            android:textColor="@color/black"/>
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+
 
     <TextView
         android:id="@+id/textView2"
