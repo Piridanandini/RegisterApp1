@@ -1,4 +1,4 @@
-package com.example.welcome.registerapp;
+package com.example.welcome.registerapp.requirement;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -7,9 +7,11 @@ import android.view.ViewGroup;
 
 import androidx.fragment.app.Fragment;
 
-public class FirstReqFragment extends Fragment {
+import com.example.welcome.registerapp.R;
 
-    public FirstReqFragment() {
+public class ThirdReqFragment extends Fragment {
+
+    public ThirdReqFragment() {
 // Required empty public constructor
     }
 
@@ -22,7 +24,7 @@ public class FirstReqFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_first_req, container, false);
+        return inflater.inflate(R.layout.fragment_third_req, container, false);
     }
 
 }

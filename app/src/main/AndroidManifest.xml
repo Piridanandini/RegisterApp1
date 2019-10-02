@@ -18,11 +18,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".installation.installationActivity"></activity>
-        <activity android:name=".Tab3Activity" />
-        <activity android:name=".authentication.profile_activity" />
-        <activity android:name=".authentication.email_signup_activity" />
+        <activity android:name=".requirement.Tab3Activity" />
         <activity android:name=".authentication.phone_login_activity" />
-        <activity android:name=".authentication.email_login_activity" />
         <activity android:name=".authentication.switch_email_phone_activity" />
         <activity android:name=".SplashActivity">
             <intent-filter>
@@ -52,11 +49,11 @@
             android:name=".installation.TabActivity"
             android:noHistory="true" />
         <activity
-            android:name=".Tab2Activity"
+            android:name=".service.Tab2Activity"
             android:noHistory="true" />
         <activity android:name=".HomeActivity" />
         <activity
-            android:name=".PlannerActivity"
+            android:name=".planner.PlannerActivity"
             android:noHistory="true" />
         <activity android:name=".LogoutActivity" />
         <activity

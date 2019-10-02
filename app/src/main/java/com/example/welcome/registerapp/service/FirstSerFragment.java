@@ -1,4 +1,4 @@
-package com.example.welcome.registerapp;
+package com.example.welcome.registerapp.service;
 
 /**
  * Created by welcome on 9/16/2019.
@@ -21,6 +21,8 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import android.widget.ImageView;
+
+import com.example.welcome.registerapp.R;
 
 import java.io.FileNotFoundException;
 import java.io.InputStream;

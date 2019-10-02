@@ -9,6 +9,9 @@ import android.view.Window;
 import android.view.WindowManager;
 
 import com.example.welcome.registerapp.installation.TabActivity;
+import com.example.welcome.registerapp.planner.PlannerActivity;
+import com.example.welcome.registerapp.requirement.Tab3Activity;
+import com.example.welcome.registerapp.service.Tab2Activity;
 
 public class HomeActivity extends AppCompatActivity {
 
@@ -104,7 +107,7 @@ public class HomeActivity extends AppCompatActivity {
             public void onClick(View view) {
                 final View.OnClickListener context = this;
 
-                Intent intent = new Intent(HomeActivity.this,Tab3Activity.class);
+                Intent intent = new Intent(HomeActivity.this, Tab3Activity.class);
                 startActivity(intent);
 
             }

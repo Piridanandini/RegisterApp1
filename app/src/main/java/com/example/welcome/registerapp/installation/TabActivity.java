@@ -4,9 +4,10 @@ import android.content.Intent;
 import android.os.Bundle;
 
 import com.example.welcome.registerapp.HomeActivity;
-import com.example.welcome.registerapp.PagerAdapter;
 import com.example.welcome.registerapp.R;
 import com.google.android.material.tabs.TabLayout;
+
+import androidx.fragment.app.Fragment;
 import androidx.viewpager.widget.ViewPager;
 import androidx.appcompat.app.AppCompatActivity;
 import android.view.View;
@@ -19,6 +20,7 @@ public class TabActivity extends AppCompatActivity {
     ViewPager simpleViewPager;
     TabLayout tabLayout;
     ImageButton button;
+    Fragment fragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +30,7 @@ public class TabActivity extends AppCompatActivity {
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_tab);
+
 // get the reference of ViewPager and TabLayout
         simpleViewPager = (ViewPager) findViewById(R.id.simpleViewPager);
         tabLayout = (TabLayout) findViewById(R.id.simpleTabLayout);
