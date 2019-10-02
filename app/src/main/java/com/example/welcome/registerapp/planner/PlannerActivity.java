@@ -3,8 +3,12 @@ package com.example.welcome.registerapp.planner;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
+
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
@@ -126,7 +130,15 @@ public class PlannerActivity extends AppCompatActivity {
             public void onDayClick(Date dateClicked) {
 
                 if ( DateFormat.format(dateClicked).equals("2019-09-20")){
-                    Toast.makeText(getApplicationContext(),DateFormat.format(dateClicked)+" This day your brother birth day ",Toast.LENGTH_LONG).show();
+                    AlertDialog.Builder alertDialog = new AlertDialog.Builder(PlannerActivity.this);
+                    LayoutInflater inflater = getLayoutInflater();
+                    View dialogLayout = inflater.inflate(R.layout.custom_alert, null);
+                    alertDialog.setView(dialogLayout);
+                    alertDialog.setPositiveButton("OK", null);
+                    alertDialog.setView(dialogLayout);
+                    // create and show the alert dialog
+                    AlertDialog dialog = alertDialog.create();
+                    alertDialog.show();
                 }
                 else {
                     Toast.makeText(getApplicationContext(),DateFormat.format(dateClicked)+" In This day no Events Available",Toast.LENGTH_LONG).show();

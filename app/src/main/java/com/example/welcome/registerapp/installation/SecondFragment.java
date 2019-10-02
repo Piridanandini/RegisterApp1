@@ -80,9 +80,9 @@ public class SecondFragment extends Fragment {
                 //getting the selected artist
                 installation artist = arrayList.get(i);
 
-                Intent intent = new Intent(getActivity(), installationActivity.class);
 
-                startActivity(intent);
+
+
             }
         });
 

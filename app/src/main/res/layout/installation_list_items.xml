@@ -4,8 +4,7 @@
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
-    >
+    android:background="@color/white">
 
 
 
@@ -16,12 +15,12 @@
         android:layout_height="160dp"
         app:cardBackgroundColor="#2A2E43"
         app:cardCornerRadius="25dp"
-        android:elevation="8dp"
+        app:cardElevation="25dp"
+        android:elevation="5dp"
         android:layout_marginTop="20dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
-        android:outlineAmbientShadowColor="#646464"
-        android:background="@drawable/custom_item_layout">
+        android:background="@drawable/custom">
 
 
 
@@ -38,6 +37,7 @@
                 android:layout_height="60dp"
                 android:background="@drawable/custom"
                 app:cardCornerRadius="20dp"
+                app:cardElevation="25dp"
                 android:layout_marginTop="5dp"
                 android:layout_marginLeft="5dp"
                 app:cardBackgroundColor="#454F63">
@@ -52,15 +52,16 @@
                     android:textSize="10dp" />
 
 
+
                 <TextView
                     android:id="@+id/textView2"
-                    android:layout_width="128dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
                     android:layout_marginTop="30dp"
-                    android:text=""
                     android:textColor="@color/white"
-                    android:textSize="15dp" />
+                    android:text=""
+                    android:textSize="15dp"
+                    android:layout_marginLeft="10dp"/>
 
             </com.google.android.material.card.MaterialCardView>
 
@@ -71,28 +72,19 @@
                 android:layout_height="60dp"
                 android:background="@drawable/custom"
                 app:cardCornerRadius="20dp"
+                app:cardElevation="25dp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="5dp"
                 app:cardBackgroundColor="#454F63">
 
                 <TextView
-                    android:id="@+id/textView3"
+                    android:id="@+id/textView6"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
-                    android:text="vehicle Type:"
+                    android:text="vehicle name:"
                     android:textColor="#fff"
                     android:textSize="10dp" />
-
-                <TextView
-                    android:id="@+id/textView6"
-                    android:layout_width="136dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginTop="30dp"
-                    android:text=""
-                    android:textColor="@color/white"
-                    android:textSize="15dp" />
 
             </com.google.android.material.card.MaterialCardView>
 
@@ -115,27 +107,18 @@
                 android:background="@drawable/custom"
                 app:cardCornerRadius="20dp"
                 app:cardBackgroundColor="#454F63"
-                android:layout_marginLeft="5dp">
+                android:layout_marginLeft="5dp"
+                app:cardElevation="25dp">
 
 
                 <TextView
-                    android:id="@+id/textView4"
+                    android:id="@+id/textView7"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
                     android:text="Location:"
                     android:textColor="#fff"
                     android:textSize="10dp" />
-
-                <TextView
-                    android:id="@+id/textView7"
-                    android:layout_width="129dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginTop="30dp"
-                    android:text=""
-                    android:textColor="@color/white"
-                    android:textSize="15dp" />
 
 
             </com.google.android.material.card.MaterialCardView>
@@ -149,27 +132,19 @@
                 app:cardCornerRadius="20dp"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="80dp"
-                app:cardBackgroundColor="#454F63">
+                app:cardBackgroundColor="#454F63"
+                app:cardElevation="25dp">
 
 
-                <TextView
-                    android:id="@+id/textView5"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_margin="10dp"
-                    android:text="Owner name:"
-                    android:textColor="#fff"
-                    android:textSize="10dp" />
 
                 <TextView
                     android:id="@+id/textView8"
-                    android:layout_width="134dp"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginTop="30dp"
-                    android:text=""
-                    android:textColor="@color/white"
-                    android:textSize="15dp" />
+                    android:layout_margin="10dp"
+                    android:text="Device no:"
+                    android:textColor="#fff"
+                    android:textSize="10dp" />
 
             </com.google.android.material.card.MaterialCardView>
 

@@ -18,10 +18,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".admin.Admin_authentication"></activity>
-        <activity android:name=".installation.installationActivity" />
         <activity android:name=".requirement.Tab3Activity" />
         <activity android:name=".authentication.phone_login_activity" />
-        <activity android:name=".authentication.switch_email_phone_activity" />
         <activity android:name=".SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -41,6 +39,7 @@
                 <data android:scheme="mmsto" />
             </intent-filter>
         </activity>
+
         <activity android:name=".MainActivity" />
         <activity
             android:name=".AdddeviceActivity"
