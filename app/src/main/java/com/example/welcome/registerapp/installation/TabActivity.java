@@ -1,5 +1,6 @@
 package com.example.welcome.registerapp.installation;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 
@@ -13,7 +14,10 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.ImageButton;
+
+import java.util.Objects;
 
 public class TabActivity extends AppCompatActivity {
 
@@ -30,6 +34,7 @@ public class TabActivity extends AppCompatActivity {
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_tab);
+        this.getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
 
 // get the reference of ViewPager and TabLayout
         simpleViewPager = (ViewPager) findViewById(R.id.simpleViewPager);
@@ -82,6 +87,8 @@ public class TabActivity extends AppCompatActivity {
             public void onTabReselected(TabLayout.Tab tab) {}
         });
     }
+
+
 }
 
 

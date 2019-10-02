@@ -12,9 +12,9 @@ import android.view.ViewGroup;
 
 import com.example.welcome.registerapp.R;
 
-public class ThirdFragment extends Fragment {
+public class Reinstall_Fragment extends Fragment {
 
-    public ThirdFragment() {
+    public Reinstall_Fragment() {
 // Required empty public constructor
     }
 

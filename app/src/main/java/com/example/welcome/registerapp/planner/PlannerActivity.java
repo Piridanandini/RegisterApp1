@@ -114,11 +114,8 @@ public class PlannerActivity extends AppCompatActivity {
         ly_right = (LinearLayout) findViewById(R.id.layout_right);
         im_back = (ImageView) findViewById(R.id.image_back);
         tx_today = (TextView) findViewById(R.id.text_today);
-
-
-
-
     }
+
 
 
     //calendar method

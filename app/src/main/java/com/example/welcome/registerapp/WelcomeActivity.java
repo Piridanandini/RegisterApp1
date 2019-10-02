@@ -58,7 +58,7 @@ public class WelcomeActivity extends AppCompatActivity {
                 @Override
                 public void onClick(View view) {
                     final View.OnClickListener context = this;
-                    Intent intent = new Intent(WelcomeActivity.this, phone_login_activity.class);
+                    Intent intent = new Intent(WelcomeActivity.this, HomeActivity.class);
                     startActivity(intent);
 
                 }

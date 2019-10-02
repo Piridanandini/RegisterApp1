@@ -4,13 +4,16 @@ package com.example.welcome.registerapp.installation;
  * Created by welcome on 9/16/2019.
  */
 
+import android.app.Activity;
 import android.os.Bundle;
 import androidx.fragment.app.Fragment;
 
+import android.text.InputType;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -27,6 +30,7 @@ public class FirstFragment extends Fragment {
     List<installation> installationList;
     DatabaseReference installation_db;
     EditText vehicle_type, vehicle_no,  device_name,  device_imei_no,  sim_name,  sim_imei_no,  sim_no,  location,  service_time,  service_engineer_name,  site_incharge_name,  authorised_person;
+
     Button btn;
 
     public FirstFragment() {
@@ -43,6 +47,7 @@ public class FirstFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+
         installation_db = FirebaseDatabase.getInstance().getReference("installation");
       
 
@@ -54,6 +59,7 @@ public class FirstFragment extends Fragment {
     }
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {
+
         vehicle_type = view.findViewById(R.id.vehicle_type);
         vehicle_no = view.findViewById(R.id.vehicle_no);
         device_name = view.findViewById(R.id.device_name);
@@ -130,6 +136,7 @@ public class FirstFragment extends Fragment {
 
 
     }
+
 
 
 }
