@@ -1,4 +1,4 @@
-package com.example.welcome.registerapp;
+package com.example.welcome.registerapp.support;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -9,6 +9,9 @@ import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.Toast;
+
+import com.example.welcome.registerapp.HomeActivity;
+import com.example.welcome.registerapp.R;
 
 public class SupportActivity extends AppCompatActivity {
     ImageButton button;

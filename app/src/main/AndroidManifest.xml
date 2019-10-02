@@ -44,7 +44,7 @@
         <activity
             android:name=".AdddeviceActivity"
             android:noHistory="true" />
-        <activity android:name=".SignupActivity" />
+        <activity android:name=".WelcomeActivity" />
         <activity
             android:name=".installation.TabActivity"
             android:noHistory="true" />
@@ -57,7 +57,7 @@
             android:noHistory="true" />
         <activity android:name=".LogoutActivity" />
         <activity
-            android:name=".SupportActivity"
+            android:name=".support.SupportActivity"
             android:noHistory="true" />
         <activity android:name=".database.add_installations" />
         <activity android:name=".authentication.VerifyPhoneActivity" />

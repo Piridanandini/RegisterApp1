@@ -13,9 +13,8 @@ import android.widget.ImageView;
 import android.widget.ViewFlipper;
 
 import com.example.welcome.registerapp.authentication.phone_login_activity;
-import com.example.welcome.registerapp.authentication.switch_email_phone_activity;
 
-public class SignupActivity extends AppCompatActivity {
+public class WelcomeActivity extends AppCompatActivity {
 
         private ViewFlipper simpleViewFlipper;
         int[] images = {R.drawable.carflip2, R.drawable.img,R.drawable.carflip3};     // array of images
@@ -59,7 +58,7 @@ public class SignupActivity extends AppCompatActivity {
                 @Override
                 public void onClick(View view) {
                     final View.OnClickListener context = this;
-                    Intent intent = new Intent(SignupActivity.this, phone_login_activity.class);
+                    Intent intent = new Intent(WelcomeActivity.this, phone_login_activity.class);
                     startActivity(intent);
 
                 }

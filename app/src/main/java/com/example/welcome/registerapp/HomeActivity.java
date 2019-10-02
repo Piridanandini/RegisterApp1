@@ -12,6 +12,7 @@ import com.example.welcome.registerapp.installation.TabActivity;
 import com.example.welcome.registerapp.planner.PlannerActivity;
 import com.example.welcome.registerapp.requirement.Tab3Activity;
 import com.example.welcome.registerapp.service.Tab2Activity;
+import com.example.welcome.registerapp.support.SupportActivity;
 
 public class HomeActivity extends AppCompatActivity {
 

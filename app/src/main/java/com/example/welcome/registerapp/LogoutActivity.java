@@ -13,7 +13,7 @@ public class LogoutActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_logout);
-        Intent loginscreen = new Intent(this, SignupActivity.class);
+        Intent loginscreen = new Intent(this, WelcomeActivity.class);
         loginscreen.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         startActivity(loginscreen);
         this.finish();
