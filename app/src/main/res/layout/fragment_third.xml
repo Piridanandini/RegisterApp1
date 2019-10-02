@@ -54,6 +54,7 @@
                         android:hint="Vehicle Type"
                         android:layout_marginLeft="55dp"
                         android:textColor="@color/white"
+                        android:maxLength="20"
                         />
 
 
@@ -83,7 +84,8 @@
                         android:singleLine="true"
                         android:hint="Vehicle No"
                         android:layout_marginLeft="55dp"
-                        android:textColor="@color/white"/>
+                        android:textColor="@color/white"
+                        android:maxLength="10"/>
 
 
                 </com.google.android.material.textfield.TextInputLayout>
@@ -110,7 +112,8 @@
                         android:singleLine="true"
                         android:hint="Device Name"
                         android:layout_marginLeft="55dp"
-                        android:textColor="@color/white"/>
+                        android:textColor="@color/white"
+                        android:maxLength="20"/>
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
@@ -137,7 +140,8 @@
                         android:singleLine="true"
                         android:hint="Device IMEI No"
                         android:layout_marginLeft="55dp"
-                        android:textColor="@color/white"/>
+                        android:textColor="@color/white"
+                        android:maxLength="15"/>
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
@@ -166,7 +170,8 @@
                         android:singleLine="true"
                         android:hint="SIM Name"
                         android:layout_marginLeft="55dp"
-                        android:textColor="@color/white"/>
+                        android:textColor="@color/white"
+                        android:maxLength="15"/>
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
@@ -194,7 +199,8 @@
                         android:singleLine="true"
                         android:hint="SIM IMEI No"
                         android:layout_marginLeft="55dp"
-                        android:textColor="@color/white"/>
+                        android:textColor="@color/white"
+                        android:maxLength="15"/>
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
@@ -220,7 +226,8 @@
                         android:singleLine="true"
                         android:hint="SIM No"
                         android:layout_marginLeft="55dp"
-                        android:textColor="@color/white"/>
+                        android:textColor="@color/white"
+                        android:maxLength="10"/>
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
@@ -248,7 +255,8 @@
                         android:singleLine="true"
                         android:hint="Location"
                         android:layout_marginLeft="55dp"
-                        android:textColor="@color/white"/>
+                        android:textColor="@color/white"
+                        android:maxLength="20"/>
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
@@ -275,7 +283,8 @@
                         android:singleLine="true"
                         android:hint="Service Time"
                         android:layout_marginLeft="55dp"
-                        android:textColor="@color/white"/>
+                        android:textColor="@color/white"
+                        android:maxLength="5"/>
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
@@ -306,7 +315,8 @@
                         android:singleLine="true"
                         android:hint="Service Engineer Name"
                         android:layout_marginLeft="55dp"
-                        android:textColor="@color/white"/>
+                        android:textColor="@color/white"
+                        android:maxLength="20"/>
 
                     <ImageView
                         android:layout_width="match_parent"
@@ -331,7 +341,8 @@
                         android:singleLine="true"
                         android:hint="Site Incharge Name"
                         android:layout_marginLeft="55dp"
-                        android:textColor="@color/white"/>
+                        android:textColor="@color/white"
+                        android:maxLength="20"/>
 
                     <ImageView
                         android:layout_width="match_parent"
@@ -357,7 +368,8 @@
                         android:singleLine="true"
                         android:hint="Authorized Person"
                         android:layout_marginLeft="55dp"
-                        android:textColor="@color/white"/>
+                        android:textColor="@color/white"
+                        android:maxLength="20"/>
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"

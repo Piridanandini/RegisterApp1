@@ -58,7 +58,9 @@
                         android:hint="No.of Services"
                         android:layout_marginTop="-250dp"
                         android:layout_marginLeft="55dp"
-                        android:textColor="#FFF"/>
+                        android:textColor="#FFF"
+                        android:maxLength="15"
+                        />
 
 
                 </com.google.android.material.textfield.TextInputLayout>
@@ -88,7 +90,9 @@
                         android:singleLine="true"
                         android:hint="Type of Device"
                         android:layout_marginLeft="55dp"
-                        android:textColor="#FFF"/>
+                        android:textColor="#FFF"
+                        android:maxLength="15"
+                        />
 
 
                 </com.google.android.material.textfield.TextInputLayout>
@@ -110,7 +114,8 @@
                         android:singleLine="true"
                         android:hint="Region/State"
                         android:layout_marginLeft="55dp"
-                        android:textColor="#FFF"/>
+                        android:textColor="#FFF"
+                        android:maxLength="20"/>
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
@@ -137,7 +142,8 @@
                         android:singleLine="true"
                         android:hint="Device Name"
                         android:layout_marginLeft="55dp"
-                        android:textColor="#FFF"/>
+                        android:textColor="#FFF"
+                        android:maxLength="15"/>
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
@@ -164,7 +170,8 @@
                         android:singleLine="true"
                         android:hint="Site Name"
                         android:layout_marginLeft="55dp"
-                        android:textColor="#FFF"/>
+                        android:textColor="#FFF"
+                        android:maxLength="20"/>
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
@@ -193,7 +200,8 @@
                         android:singleLine="true"
                         android:hint="Email"
                         android:layout_marginLeft="55dp"
-                        android:textColor="#FFF"/>
+                        android:textColor="#FFF"
+                        android:maxLength="30"/>
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
@@ -219,9 +227,10 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:singleLine="true"
-                        android:hint="Mobile"
+                        android:hint="Mobile no"
                         android:layout_marginLeft="55dp"
-                        android:textColor="#FFF"/>
+                        android:textColor="#FFF"
+                        android:maxLength="10"/>
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
@@ -243,10 +252,11 @@
                         android:id="@+id/sim_no"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:singleLine="true"
+                        android:inputType="textMultiLine"
                         android:hint="Address"
                         android:layout_marginLeft="55dp"
-                        android:textColor="#FFF"/>
+                        android:textColor="#FFF"
+                        />
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
@@ -271,7 +281,8 @@
                         android:singleLine="true"
                         android:hint="Pincode"
                         android:layout_marginLeft="55dp"
-                        android:textColor="#FFF"/>
+                        android:textColor="#FFF"
+                        android:maxLength="8"/>
 
                     <ImageView
                         android:layout_width="match_parent"
