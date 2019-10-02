@@ -17,7 +17,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".installation.installationActivity"></activity>
+        <activity android:name=".admin.Admin_authentication"></activity>
+        <activity android:name=".installation.installationActivity" />
         <activity android:name=".requirement.Tab3Activity" />
         <activity android:name=".authentication.phone_login_activity" />
         <activity android:name=".authentication.switch_email_phone_activity" />
