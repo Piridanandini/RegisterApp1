@@ -69,6 +69,7 @@
         <activity android:name=".database.add_installations" />
         <activity android:name=".authentication.VerifyPhoneActivity"
             />
+        <activity android:name=".pdf_activity" />
     </application>
 
 </manifest>
