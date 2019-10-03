@@ -50,7 +50,6 @@ public class WelcomeActivity extends AppCompatActivity {
             // set auto start for flipping between views
             simpleViewFlipper.setAutoStart(true);
 
-
             Button button = (Button)findViewById(R.id.Loginbutton);
             // set corner radius value
             // Implement onClickListener event on CardView
@@ -58,7 +57,7 @@ public class WelcomeActivity extends AppCompatActivity {
                 @Override
                 public void onClick(View view) {
                     final View.OnClickListener context = this;
-                    Intent intent = new Intent(WelcomeActivity.this, HomeActivity.class);
+                    Intent intent = new Intent(WelcomeActivity.this, pdf_activity.class);
                     startActivity(intent);
 
                 }

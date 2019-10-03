@@ -3,6 +3,8 @@
     package="com.example.welcome.registerapp">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
@@ -17,7 +19,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".admin.Admin_authentication"></activity>
+        <activity android:name=".pdf_activity"></activity>
+        <activity android:name=".admin.Admin_authentication" />
         <activity android:name=".requirement.Tab3Activity" />
         <activity android:name=".authentication.phone_login_activity" />
         <activity android:name=".SplashActivity">
@@ -39,9 +42,7 @@
                 <data android:scheme="mmsto" />
             </intent-filter>
         </activity>
-
         <activity android:name=".MainActivity" />
-
         <activity android:name=".WelcomeActivity" />
         <activity
             android:name=".installation.TabActivity"
@@ -59,6 +60,18 @@
             android:noHistory="true" />
         <activity android:name=".database.add_installations" />
         <activity android:name=".authentication.VerifyPhoneActivity" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths"/>
+        </provider>
+
+
     </application>
 
 </manifest>

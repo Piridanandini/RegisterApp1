@@ -41,127 +41,337 @@
                     android:textStyle="bold"
                     android:textSize="20dp"/>
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Vehicle Type:"
-        android:textSize="15dp"
-        android:textColor="@color/black"
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="20dp"
-        android:id="@+id/VehicleType"/>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Vehicle No:"
-        android:textSize="15dp"
-        android:textColor="@color/black"
-        android:layout_marginTop="15dp"
-        android:layout_marginLeft="20dp"
-        android:id="@+id/VehicleNo"/>
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Device IMEI No:"
-        android:textSize="15dp"
-        android:textColor="@color/black"
-        android:layout_marginTop="15dp"
-        android:layout_marginLeft="20dp"
-        android:id="@+id/DeviceImei"/>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Device Name:"
-        android:textSize="15dp"
-        android:textColor="@color/black"
-        android:layout_marginTop="15dp"
-        android:layout_marginLeft="20dp"
-        android:id="@+id/DeviceName"/>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="SIM Name:"
-        android:textSize="15dp"
-        android:textColor="@color/black"
-        android:layout_marginTop="15dp"
-        android:layout_marginLeft="20dp"
-        android:id="@+id/SimName"/>
-
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="SIM IMEI No:"
-        android:textSize="15dp"
-        android:textColor="@color/black"
-        android:layout_marginTop="15dp"
-        android:layout_marginLeft="20dp"
-        android:id="@+id/SimImei"/>
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="Vehicle Type:"
+                    android:textSize="15dp"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:id="@+id/VehicleType"/>
 
 
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="SIM No:"
-        android:textSize="15dp"
-        android:textColor="@color/black"
-        android:layout_marginTop="15dp"
-        android:layout_marginLeft="20dp"
-        android:id="@+id/SimNo"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="18dp"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="-20dp"
+                    android:layout_marginLeft="130dp"
+                    android:id="@+id/text"/>
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Location:"
-        android:textSize="15dp"
-        android:textColor="@color/black"
-        android:layout_marginTop="15dp"
-        android:layout_marginLeft="20dp"
-        android:id="@+id/Location"/>
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Service Time:"
-        android:textSize="15dp"
-        android:textColor="@color/black"
-        android:layout_marginTop="15dp"
-        android:layout_marginLeft="20dp"
-        android:id="@+id/ServiceTime"/>
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Service Engineer Name:"
-        android:textSize="15dp"
-        android:textColor="@color/black"
-        android:layout_marginTop="15dp"
-        android:layout_marginLeft="20dp"
-        android:id="@+id/ServiceEngineer"/>
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Site Incharge Name:"
-        android:textSize="15dp"
-        android:textColor="@color/black"
-        android:layout_marginTop="15dp"
-        android:layout_marginLeft="20dp"
-        android:id="@+id/SiteIncharge"/>
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Authorized Person:"
-        android:textSize="15dp"
-        android:textColor="@color/black"
-        android:layout_marginTop="15dp"
-        android:layout_marginLeft="20dp"
-        android:id="@+id/AuthorisedPerson"/>
+
+
+
+
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="Vehicle No:"
+                    android:textSize="15dp"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginLeft="20dp"
+                    android:id="@+id/VehicleNo"/>
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="18dp"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="-20dp"
+                    android:layout_marginLeft="130dp"
+                    android:id="@+id/text1"/>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <TextView
+                    android:layout_width="110dp"
+                    android:layout_height="wrap_content"
+                    android:text="Device IMEI No:"
+                    android:textSize="15dp"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginLeft="20dp"
+                    android:id="@+id/DeviceImei"/>
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="18dp"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="-20dp"
+                    android:layout_marginLeft="130dp"
+                    android:id="@+id/text2"/>
+
+
+
+
+
+
+
+
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="Device Name:"
+                    android:textSize="15dp"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginLeft="20dp"
+                    android:id="@+id/DeviceName"/>
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="18dp"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="-20dp"
+                    android:layout_marginLeft="130dp"
+                    android:id="@+id/text3"/>
+
+
+
+
+
+
+
+
+
+
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="SIM Name:"
+                    android:textSize="15dp"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginLeft="20dp"
+                    android:id="@+id/SimName"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="18dp"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="-20dp"
+                    android:layout_marginLeft="130dp"
+                    android:id="@+id/text4"/>
+
+
+
+
+
+
+
+
+
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="SIM IMEI No:"
+                    android:textSize="15dp"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginLeft="20dp"
+                    android:id="@+id/SimImei"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="18dp"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="-20dp"
+                    android:layout_marginLeft="130dp"
+                    android:id="@+id/text5"/>
+
+
+
+
+
+
+
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="SIM No:"
+                    android:textSize="15dp"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginLeft="20dp"
+                    android:id="@+id/SimNo"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="18dp"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="-20dp"
+                    android:layout_marginLeft="130dp"
+                    android:id="@+id/text6"/>
+
+
+
+
+
+
+
+
+
+
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="Location:"
+                    android:textSize="15dp"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginLeft="20dp"
+                    android:id="@+id/Location"/>
+
+
+
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="18dp"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="-20dp"
+                    android:layout_marginLeft="130dp"
+                    android:id="@+id/text7"/>
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="Service Time:"
+                    android:textSize="15dp"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginLeft="20dp"
+                    android:id="@+id/ServiceTime"/>
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="18dp"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="-20dp"
+                    android:layout_marginLeft="130dp"
+                    android:id="@+id/text8"/>
+
+
+
+
+
+
+                <TextView
+                    android:layout_width="110dp"
+                    android:layout_height="wrap_content"
+                    android:text="Service Engineer Name:"
+                    android:textSize="15dp"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginLeft="20dp"
+                    android:id="@+id/ServiceEngineer"/>
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="18dp"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="-30dp"
+                    android:layout_marginLeft="130dp"
+                    android:id="@+id/text9"/>
+
+
+
+
+
+
+
+
+
+                <TextView
+                    android:layout_width="110dp"
+                    android:layout_height="wrap_content"
+                    android:text="Site Incharge Name:"
+                    android:textSize="15dp"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginLeft="20dp"
+                    android:id="@+id/SiteIncharge"/>
+
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="18dp"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="-30dp"
+                    android:layout_marginLeft="130dp"
+                    android:id="@+id/text10"/>
+
+
+
+
+
+
+                <TextView
+                    android:layout_width="110dp"
+                    android:layout_height="wrap_content"
+                    android:text="Authorized Person:"
+                    android:textSize="15dp"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginLeft="20dp"
+                    android:id="@+id/AuthorisedPerson"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="18dp"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="-20dp"
+                    android:layout_marginLeft="130dp"
+                    android:id="@+id/text11"/>
+
+
+
+
+
             </LinearLayout>
         </ScrollView>
     </FrameLayout>
