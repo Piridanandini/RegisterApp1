@@ -55,7 +55,7 @@ public class pdf_activity extends AppCompatActivity {
     private Button mCreateButton;
     private File pdfFile;
     DatabaseReference installation_db;
-    ArrayList<installation> arrayList = new ArrayList<installation>();
+    ArrayList<installation> arrayList = new ArrayList<>();
     final private int REQUEST_CODE_ASK_PERMISSIONS = 111;
 
 
@@ -85,16 +85,11 @@ public class pdf_activity extends AppCompatActivity {
             }
         });
 
-        mContentEditText = (EditText) findViewById(R.id.edit_text_content);
         mCreateButton = (Button) findViewById(R.id.button_create);
         mCreateButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (mContentEditText.getText().toString().isEmpty()){
-                    mContentEditText.setError("Body is empty");
-                    mContentEditText.requestFocus();
-                    return;
-                }
+
                 try {
                     createPdfWrapper();
                 } catch (FileNotFoundException e) {

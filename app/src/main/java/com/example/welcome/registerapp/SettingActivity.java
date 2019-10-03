@@ -25,6 +25,16 @@ public class SettingActivity extends AppCompatActivity {
         setContentView(R.layout.activity_setting);
 
 
+        Button pdfbutton = findViewById(R.id.CreatepdfButton);
+        pdfbutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(SettingActivity.this, pdf_activity.class);
+                startActivity(intent);
+            }
+        });
+
+
         Button button = (Button)findViewById(R.id.LogoutButton);
         // set corner radius value
         // Implement onClickListener event on CardView
