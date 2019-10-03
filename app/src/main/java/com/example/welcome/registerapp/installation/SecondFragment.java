@@ -90,22 +90,29 @@ public class SecondFragment extends Fragment {
         installationList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
 
+
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 //getting the selected artist
                 installation artist = arrayList.get(i);
-                vehicle_type = view.findViewById(R.id.text);
-                vehicle_no = view.findViewById(R.id.text1);
-                device_name = view.findViewById(R.id.text2);
-                device_imei_no = view.findViewById(R.id.text3);
-                sim_name = view.findViewById(R.id.text4);
-                sim_imei_no = view.findViewById(R.id.text5);
-                sim_no = view.findViewById(R.id.text6);
-                location = view.findViewById(R.id.text7);
-                service_time = view.findViewById(R.id.text8);
-                service_engineer_name = view.findViewById(R.id.text9);
-                site_incharge_name = view.findViewById(R.id.text10);
-                authorised_person = view.findViewById(R.id.text11);
+
+
+                AlertDialog.Builder alertDialog = new AlertDialog.Builder(getActivity());
+                LayoutInflater inflater = getLayoutInflater();
+                View view1 = inflater.inflate(R.layout.custom, null);
+                vehicle_type = view1.findViewById(R.id.text);
+                vehicle_no = view1.findViewById(R.id.text1);
+                device_name = view1.findViewById(R.id.text2);
+                device_imei_no = view1.findViewById(R.id.text3);
+                sim_name = view1.findViewById(R.id.text4);
+                sim_imei_no = view1.findViewById(R.id.text5);
+                sim_no = view1.findViewById(R.id.text6);
+                location = view1.findViewById(R.id.text7);
+                service_time = view1.findViewById(R.id.text8);
+                service_engineer_name = view1.findViewById(R.id.text9);
+                site_incharge_name = view1.findViewById(R.id.text10);
+                authorised_person = view1.findViewById(R.id.text11);
+
 
                 vehicle_type.setText(artist.getVehicle_type());
                 vehicle_no.setText(artist.getVehicle_no());
@@ -119,13 +126,9 @@ public class SecondFragment extends Fragment {
                 service_engineer_name.setText(artist.getService_engineer_name());
                 site_incharge_name.setText(artist.getSite_incharge_name());
                 authorised_person.setText(artist.getAuthorised_person());
-
-                AlertDialog.Builder alertDialog = new AlertDialog.Builder(getActivity());
-                LayoutInflater inflater = getLayoutInflater();
-                View dialogLayout = inflater.inflate(R.layout.custom, null);
-                alertDialog.setView(dialogLayout);
+                alertDialog.setView(view1);
                 alertDialog.setPositiveButton("OK", null);
-                alertDialog.setView(dialogLayout);
+                alertDialog.setView(view1);
                 // create and show the alert dialog
                 AlertDialog dialog = alertDialog.create();
                 // Initialize a new window manager layout parameters
@@ -176,8 +179,8 @@ public class SecondFragment extends Fragment {
             public void onClick(View view) {
 
 //                    updateArtist(artistId, name, genre);
-                    Toast.makeText(getActivity(), "updated", Toast.LENGTH_SHORT).show();
-                    b.dismiss();
+                Toast.makeText(getActivity(), "updated", Toast.LENGTH_SHORT).show();
+                b.dismiss();
 
             }
         });
@@ -204,5 +207,4 @@ public class SecondFragment extends Fragment {
 
 
 }
-
 

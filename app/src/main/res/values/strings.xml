@@ -35,4 +35,11 @@
     <string name="otp_will_be_sent_through_messages_and_will_also_be_automatically_detected_if_fails_to_detect_enter_manually">OTP will be sent through messages and will also be automatically detected if fails to detect enter manually</string>
     <string name="enter_code">enter code</string>
     <string name="enter_your_Country">enter_your_country</string>
+    <string name="logout1">LOGOUT</string>
+    <string name="admin1">ADMIN</string>
+    <string name="settings">Settings</string>
+    <string name="username">Username</string>
+    <string name="password1">Password</string>
+    <string name="apply">Apply</string>
+    <string name="admin">ADMIN</string>
 </resources>

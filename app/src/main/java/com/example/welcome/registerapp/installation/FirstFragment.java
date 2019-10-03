@@ -56,6 +56,7 @@ public class FirstFragment extends Fragment {
 
         return inflater.inflate(R.layout.fragment_first, container, false);
 
+
     }
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {
@@ -132,6 +133,8 @@ public class FirstFragment extends Fragment {
         else {
             Toast.makeText(getActivity(), "Please enter all fields", Toast.LENGTH_SHORT).show();
         }
+
+
 
 
 
