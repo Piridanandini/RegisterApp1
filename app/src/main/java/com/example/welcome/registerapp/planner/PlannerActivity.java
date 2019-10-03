@@ -17,6 +17,7 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.welcome.registerapp.HomeActivity;
 import com.example.welcome.registerapp.R;
 import com.github.sundeepk.compactcalendarview.CompactCalendarView;
 import com.github.sundeepk.compactcalendarview.domain.Event;
@@ -98,9 +99,14 @@ public class PlannerActivity extends AppCompatActivity {
             @Override
 
             public void onClick(View v) {
+
+                Intent intent = new Intent(PlannerActivity.this, HomeActivity.class);
+                startActivity(intent);
                 finish();
+
             }
         });
+
 
 
     }

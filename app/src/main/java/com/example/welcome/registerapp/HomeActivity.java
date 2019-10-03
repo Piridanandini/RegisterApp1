@@ -1,12 +1,18 @@
 package com.example.welcome.registerapp;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
+
+import android.os.Handler;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.Toast;
 
 import com.example.welcome.registerapp.installation.TabActivity;
 import com.example.welcome.registerapp.planner.PlannerActivity;
@@ -16,6 +22,7 @@ import com.example.welcome.registerapp.support.SupportActivity;
 
 public class HomeActivity extends AppCompatActivity {
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,6 +31,9 @@ public class HomeActivity extends AppCompatActivity {
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_home);
+
+
+
 
 
         CardView cardView = (CardView) findViewById(R.id.card1);
@@ -93,7 +103,7 @@ public class HomeActivity extends AppCompatActivity {
             public void onClick(View view) {
                 final View.OnClickListener context = this;
 
-                Intent intent = new Intent(HomeActivity.this,LogoutActivity.class);
+                Intent intent = new Intent(HomeActivity.this,SettingActivity.class);
                 startActivity(intent);
 
             }
@@ -125,8 +135,15 @@ public class HomeActivity extends AppCompatActivity {
 
 
     }
-}
 
+
+
+
+
+
+
+
+}
 
 
 
