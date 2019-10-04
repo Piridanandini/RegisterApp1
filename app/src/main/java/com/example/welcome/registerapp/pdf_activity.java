@@ -186,6 +186,7 @@ public class pdf_activity extends AppCompatActivity {
         table.addCell("device_name");
         table.addCell("device_imei_no;");
         table.addCell("sim_name");
+        table.addCell("sim_imei_no");
         table.addCell("sim_no");
         table.addCell("location");
         table.addCell("service_time");
@@ -195,6 +196,7 @@ public class pdf_activity extends AppCompatActivity {
         for (int i=0;i<arrayList.size();i++)
         {
             installation install = arrayList.get(i);
+
             table.addCell(""+i);
             table.addCell(install.getInstallationId());
             table.addCell(install.getVehicle_type());
