@@ -16,7 +16,7 @@
         android:background="@color/flu"
         app:layout_scrollFlags="scroll|enterAlways"
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
-        android:layout_marginTop="10dp">
+        >
 
         <ImageButton
             android:layout_width="50dp"
@@ -47,7 +47,7 @@
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/simpleTabLayout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="30dp"
         app:tabBackground="@color/flu"
         app:tabIndicatorColor="#000"
         app:tabSelectedTextColor="#000"

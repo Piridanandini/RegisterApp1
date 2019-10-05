@@ -48,7 +48,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
                     android:layout_marginTop="5dp"
-                    android:text="vehicle no:"
+                    android:text="Service Date:"
                     android:textColor="#fff"
                     android:textSize="10dp" />
 
@@ -93,7 +93,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
                     android:layout_marginTop="5dp"
-                    android:text="vehicle type:"
+                    android:text="vehicle no:"
                     android:textColor="#fff"
                     android:textSize="10dp" />
 

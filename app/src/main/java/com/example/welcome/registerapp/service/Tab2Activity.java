@@ -43,7 +43,12 @@ public class Tab2Activity extends AppCompatActivity {
         // set an icon for the second tab
         tabLayout.addTab(secondTab); // add  the tab  in the TabLayout
     // Create a new Tab named "Third"
-       // add  the tab at in the TabLayout
+
+        TabLayout.Tab thirdTab = tabLayout.newTab();
+        thirdTab.setText("Ongoing"); // set the Text for the second Tab
+        // set an icon for the second tab
+        tabLayout.addTab(thirdTab);
+        // add  the tab at in the TabLayout
 
         PageAdapter adapter = new PageAdapter
                 (getSupportFragmentManager(), tabLayout.getTabCount());

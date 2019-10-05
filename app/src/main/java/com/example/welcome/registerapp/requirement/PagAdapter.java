@@ -28,10 +28,11 @@ public class PagAdapter extends FragmentStatePagerAdapter {
                 FirstReqFragment tab1 = new FirstReqFragment();
                 return tab1;
             case 1:
-                SecondReqFragment tab2 = new SecondReqFragment();
+                ThirdReqFragment tab2 = new ThirdReqFragment();
                 return tab2;
+
             case 2:
-                ThirdReqFragment tab3 = new ThirdReqFragment();
+                FourthReqFragment tab3 = new FourthReqFragment();
                 return tab3;
             default:
                 return null;

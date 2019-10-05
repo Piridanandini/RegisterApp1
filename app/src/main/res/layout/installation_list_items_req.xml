@@ -48,7 +48,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
                     android:layout_marginTop="5dp"
-                    android:text="vehicle no:"
+                    android:text="No of Device:"
                     android:textColor="#fff"
                     android:textSize="10dp" />
 
@@ -93,7 +93,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
                     android:layout_marginTop="5dp"
-                    android:text="vehicle type:"
+                    android:text="Site name:"
                     android:textColor="#fff"
                     android:textSize="10dp" />
 
@@ -138,7 +138,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
                     android:layout_marginTop="5dp"
-                    android:text="Location:"
+                    android:text="Device Name:"
                     android:textColor="#fff"
                     android:textSize="10dp" />
 
@@ -174,7 +174,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
                     android:layout_marginTop="5dp"
-                    android:text="Device no:"
+                    android:text="Region:"
                     android:textColor="#fff"
                     android:textSize="10dp" />
 

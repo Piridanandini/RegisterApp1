@@ -29,6 +29,9 @@ public class PageAdapter extends FragmentStatePagerAdapter {
             case 1:
                 SecondSerFragment tab2 = new SecondSerFragment();
                 return tab2;
+            case 2:
+                ThirdSerFragment tab3 = new ThirdSerFragment();
+                return tab3;
             default:
                 return null;
         }

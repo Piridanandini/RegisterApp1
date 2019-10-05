@@ -51,7 +51,7 @@
                         android:layout_marginTop="-35dp"/>
 
                     <EditText
-                        android:id="@+id/service"
+                        android:id="@+id/NoofDevice"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:singleLine="true"
@@ -84,7 +84,7 @@
                         android:layout_marginTop="-35dp"/>
 
                     <EditText
-                        android:id="@+id/vehicle_no"
+                        android:id="@+id/TypeofDevice"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:singleLine="true"
@@ -108,7 +108,7 @@
                     android:theme="@style/TextLabel">
 
                     <EditText
-                        android:id="@+id/asset_code"
+                        android:id="@+id/Region"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:singleLine="true"
@@ -136,7 +136,7 @@
                     android:theme="@style/TextLabel">
 
                     <EditText
-                        android:id="@+id/device_name"
+                        android:id="@+id/DeviceName"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:singleLine="true"
@@ -164,7 +164,7 @@
                     android:theme="@style/TextLabel">
 
                     <EditText
-                        android:id="@+id/device_imei_no"
+                        android:id="@+id/SiteName"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:singleLine="true"
@@ -194,7 +194,7 @@
                     android:theme="@style/TextLabel">
 
                     <EditText
-                        android:id="@+id/sim_name"
+                        android:id="@+id/Email"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:singleLine="true"
@@ -223,7 +223,7 @@
                     android:theme="@style/TextLabel">
 
                     <EditText
-                        android:id="@+id/sim_imei_no"
+                        android:id="@+id/MobileNo"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:singleLine="true"
@@ -249,7 +249,7 @@
                     android:theme="@style/TextLabel">
 
                     <EditText
-                        android:id="@+id/sim_no"
+                        android:id="@+id/Address"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:inputType="textMultiLine"
