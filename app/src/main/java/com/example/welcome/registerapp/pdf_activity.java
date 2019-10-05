@@ -178,7 +178,9 @@ public class pdf_activity extends AppCompatActivity {
         document.open();
         float [] pointColumnWidths = {150F, 150F, 150F, 150F,150F, 150F, 150F, 150F, 150F, 150F, 150F, 150F,150F, 150F, 150F, 150F};
         PdfPTable table = new PdfPTable(pointColumnWidths);
-        Font fontH1 = new Font(Font.FontFamily.TIMES_ROMAN, 12, Font.NORMAL);
+        table.setTotalWidth(288);
+        Font fontH1 = new Font(Font.FontFamily.TIMES_ROMAN, 20, Font.BOLD);
+        Font font_for_values = new Font(Font.FontFamily.TIMES_ROMAN,15,Font.NORMAL);
         table.addCell(new PdfPCell(new Phrase("one",fontH1)));
         table.addCell("installationId");
         table.addCell("vehicle_type");
@@ -186,6 +188,7 @@ public class pdf_activity extends AppCompatActivity {
         table.addCell("device_name");
         table.addCell("device_imei_no;");
         table.addCell("sim_name");
+        table.addCell("sim_imei_no");
         table.addCell("sim_no");
         table.addCell("location");
         table.addCell("service_time");
@@ -210,12 +213,9 @@ public class pdf_activity extends AppCompatActivity {
             table.addCell(install.getSite_incharge_name());
             table.addCell(install.getAuthorised_person());
         }
-
-
         document.add(table);
         document.close();
         previewPdf();
-
     }
 
 
