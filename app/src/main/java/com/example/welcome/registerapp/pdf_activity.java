@@ -24,6 +24,8 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.welcome.registerapp.database.installation;
+import com.example.welcome.registerapp.database.requirements;
+import com.example.welcome.registerapp.database.service;
 import com.example.welcome.registerapp.installation.installationListView;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -57,7 +59,9 @@ public class pdf_activity extends AppCompatActivity {
     private Button mCreateButton;
     private File pdfFile;
     DatabaseReference installation_db;
-    ArrayList<installation> arrayList = new ArrayList<>();
+    ArrayList<installation> arrayList_installation = new ArrayList<>();
+    ArrayList<requirements> arrayList_requirements = new ArrayList<>();
+    ArrayList<service> arrayList_services = new ArrayList<>();
     final private int REQUEST_CODE_ASK_PERMISSIONS = 111;
 
 
@@ -72,12 +76,12 @@ public class pdf_activity extends AppCompatActivity {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 //clearing the previous artist list
-                arrayList.clear();
+                arrayList_installation.clear();
                 //iterating through all the nodes
                 for (DataSnapshot postSnapshot : dataSnapshot.getChildren()) {
                     //getting artist
                     installation install = postSnapshot.getValue(installation.class);
-                    arrayList.add(install);
+                    arrayList_installation.add(install);
                 }
             }
 
@@ -92,9 +96,10 @@ public class pdf_activity extends AppCompatActivity {
         mCreateButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                String name = "installation";
 
                 try {
-                    createPdfWrapper();
+                    createPdfWrapper(name);
                 } catch (FileNotFoundException e) {
                     e.printStackTrace();
                 } catch (DocumentException e) {
@@ -104,7 +109,7 @@ public class pdf_activity extends AppCompatActivity {
         });
 
     }
-    private void createPdfWrapper() throws FileNotFoundException, DocumentException {
+    private void createPdfWrapper(String name) throws FileNotFoundException, DocumentException {
 
         int hasWriteStoragePermission = ActivityCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE);
         if (hasWriteStoragePermission != PackageManager.PERMISSION_GRANTED) {
@@ -129,7 +134,12 @@ public class pdf_activity extends AppCompatActivity {
             }
             return;
         }else {
-            createPdf();
+            if(name.equals("installation"))
+            createPdf_installations();
+            else if (name.equals("requirements"))
+                createPdf_requirements();
+            else
+                createPdf_services();
         }
     }
     @Override
@@ -139,7 +149,7 @@ public class pdf_activity extends AppCompatActivity {
                 if (grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                     // Permission Granted
                     try {
-                        createPdfWrapper();
+                        createPdfWrapper("installation");
                     } catch (FileNotFoundException e) {
                         e.printStackTrace();
                     } catch (DocumentException e) {
@@ -164,7 +174,7 @@ public class pdf_activity extends AppCompatActivity {
                 .show();
     }
 
-    private void createPdf() throws FileNotFoundException, DocumentException {
+    private void createPdf_installations() throws FileNotFoundException, DocumentException {
 
 
 
@@ -197,10 +207,10 @@ public class pdf_activity extends AppCompatActivity {
         table.addCell(new PdfPCell(new Phrase("site incharge name",fontH1)));
         table.addCell(new PdfPCell(new Phrase("authorised person",fontH1)));
 
-        for (int i=0;i<arrayList.size();i++)
+        for (int i=0;i<arrayList_installation.size();i++)
         {
-            installation install = arrayList.get(i);
-            Toast.makeText(this, "working"+arrayList.size(), Toast.LENGTH_SHORT).show();
+            installation install = arrayList_installation.get(i);
+            Toast.makeText(this, "working"+arrayList_installation.size(), Toast.LENGTH_SHORT).show();
             table.addCell(new PdfPCell(new Phrase(""+i,fontP1)));
             table.addCell(new PdfPCell(new Phrase(install.getVehicle_type(),fontP1)));
             table.addCell(new PdfPCell(new Phrase(install.getVehicle_no(),fontP1)));
@@ -237,35 +247,96 @@ public class pdf_activity extends AppCompatActivity {
         PdfWriter.getInstance(document, output);
         document.open();
 
-        PdfPTable table = new PdfPTable(13);
+        //String installationId, String noofDevice, String typeofDevice, String region, String deviceName, String siteName, String email, String mobileNo, String address, String pincode) {
+
+
+        PdfPTable table = new PdfPTable(10);
         Font fontH1 = new Font(Font.FontFamily.TIMES_ROMAN, 8, Font.BOLD);
         Font fontP1 = new Font(Font.FontFamily.TIMES_ROMAN, 5, Font.NORMAL);
         table.addCell(new PdfPCell(new Phrase("s.No",fontH1)));
-        table.addCell(new PdfPCell(new Phrase("vehicle type",fontH1)));
+        table.addCell(new PdfPCell(new Phrase("noofDevice",fontH1)));
+        table.addCell(new PdfPCell(new Phrase("typeofDevice",fontH1)));
+        table.addCell(new PdfPCell(new Phrase("region",fontH1)));
+        table.addCell(new PdfPCell(new Phrase("deviceName",fontH1)));
+        table.addCell(new PdfPCell(new Phrase("siteName",fontH1)));
+        table.addCell(new PdfPCell(new Phrase("email",fontH1)));
+        table.addCell(new PdfPCell(new Phrase("mobileNo",fontH1)));
+        table.addCell(new PdfPCell(new Phrase("address",fontH1)));
+        table.addCell(new PdfPCell(new Phrase("pincode",fontH1)));
+
+
+        for (int i=0;i<arrayList_installation.size();i++)
+        {
+            requirements install = arrayList_requirements.get(i);
+            Toast.makeText(this, "working"+arrayList_requirements.size(), Toast.LENGTH_SHORT).show();
+            table.addCell(new PdfPCell(new Phrase(""+i,fontP1)));
+            table.addCell(new PdfPCell(new Phrase(install.getNoofDevice(),fontP1)));
+            table.addCell(new PdfPCell(new Phrase(install.getTypeofDevice(),fontP1)));
+            table.addCell(new PdfPCell(new Phrase(install.getRegion(),fontP1)));
+            table.addCell(new PdfPCell(new Phrase(install.getDeviceName(),fontP1)));
+            table.addCell(new PdfPCell(new Phrase(install.getSiteName(),fontP1)));
+            table.addCell(new PdfPCell(new Phrase(install.getEmail(),fontP1)));
+            table.addCell(new PdfPCell(new Phrase(install.getMobileNo(),fontP1)));
+            table.addCell(new PdfPCell(new Phrase(install.getAddress(),fontP1)));
+            table.addCell(new PdfPCell(new Phrase(install.getPincode(),fontP1)));
+
+        }
+
+        document.add(table);
+        document.close();
+        previewPdf();
+
+    }
+
+    private void createPdf_services() throws FileNotFoundException, DocumentException {
+
+
+
+        File docsFolder = new File(Environment.getExternalStorageDirectory() + "/Documents");
+        if (!docsFolder.exists()) {
+            docsFolder.mkdir();
+            Log.i(TAG, "Created a new directory for PDF");
+        }
+        String uniqueString = UUID.randomUUID().toString();
+        pdfFile = new File(docsFolder.getAbsolutePath(),uniqueString+".pdf");
+        OutputStream output = new FileOutputStream(pdfFile);
+        Document document = new Document();
+        PdfWriter.getInstance(document, output);
+        document.open();
+
+        //String installationId, String service_date, String vehicle_no, String device_name, String device_imei_no, String sim_name, String sim_imei_no, String sim_no, String asset_code, String location, String service_time, String service_engineer_name, String site_incharge_name, String authorised_person) {
+
+        PdfPTable table = new PdfPTable(14);
+        Font fontH1 = new Font(Font.FontFamily.TIMES_ROMAN, 8, Font.BOLD);
+        Font fontP1 = new Font(Font.FontFamily.TIMES_ROMAN, 5, Font.NORMAL);
+        table.addCell(new PdfPCell(new Phrase("s.No",fontH1)));
+        table.addCell(new PdfPCell(new Phrase("service_date",fontH1)));
         table.addCell(new PdfPCell(new Phrase("vehicle no",fontH1)));
         table.addCell(new PdfPCell(new Phrase("device name",fontH1)));
         table.addCell(new PdfPCell(new Phrase("device imei no",fontH1)));
         table.addCell(new PdfPCell(new Phrase("sim name",fontH1)));
         table.addCell(new PdfPCell(new Phrase("sim imei no",fontH1)));
         table.addCell(new PdfPCell(new Phrase("sim no",fontH1)));
+        table.addCell(new PdfPCell(new Phrase("asset code",fontH1)));
         table.addCell(new PdfPCell(new Phrase("location",fontH1)));
         table.addCell(new PdfPCell(new Phrase("service time",fontH1)));
         table.addCell(new PdfPCell(new Phrase("service engineer name",fontH1)));
         table.addCell(new PdfPCell(new Phrase("site incharge name",fontH1)));
         table.addCell(new PdfPCell(new Phrase("authorised person",fontH1)));
 
-        for (int i=0;i<arrayList.size();i++)
+        for (int i=0;i<arrayList_services.size();i++)
         {
-            installation install = arrayList.get(i);
-            Toast.makeText(this, "working"+arrayList.size(), Toast.LENGTH_SHORT).show();
+            service install = arrayList_services.get(i);
+            Toast.makeText(this, "working"+arrayList_installation.size(), Toast.LENGTH_SHORT).show();
             table.addCell(new PdfPCell(new Phrase(""+i,fontP1)));
-            table.addCell(new PdfPCell(new Phrase(install.getVehicle_type(),fontP1)));
+            table.addCell(new PdfPCell(new Phrase(install.getService_date(),fontP1)));
             table.addCell(new PdfPCell(new Phrase(install.getVehicle_no(),fontP1)));
             table.addCell(new PdfPCell(new Phrase(install.getDevice_name(),fontP1)));
             table.addCell(new PdfPCell(new Phrase(install.getDevice_imei_no(),fontP1)));
             table.addCell(new PdfPCell(new Phrase(install.getSim_name(),fontP1)));
             table.addCell(new PdfPCell(new Phrase(install.getSim_imei_no(),fontP1)));
             table.addCell(new PdfPCell(new Phrase(install.getSim_no(),fontP1)));
+            table.addCell(new PdfPCell(new Phrase(install.getAsset_code(),fontP1)));
             table.addCell(new PdfPCell(new Phrase(install.getLocation(),fontP1)));
             table.addCell(new PdfPCell(new Phrase(install.getService_time(),fontP1)));
             table.addCell(new PdfPCell(new Phrase(install.getService_engineer_name(),fontP1)));
