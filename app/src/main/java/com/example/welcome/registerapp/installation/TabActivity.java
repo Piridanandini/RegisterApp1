@@ -7,6 +7,7 @@ import android.os.Bundle;
 
 import com.example.welcome.registerapp.HomeActivity;
 import com.example.welcome.registerapp.R;
+import com.example.welcome.registerapp.admin.global_vars;
 import com.google.android.material.tabs.TabLayout;
 
 import androidx.fragment.app.Fragment;
@@ -17,6 +18,7 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.ImageButton;
+import android.widget.Toast;
 
 import java.util.Objects;
 
@@ -26,10 +28,13 @@ public class TabActivity extends AppCompatActivity {
     TabLayout tabLayout;
     ImageButton button;
     Fragment fragment;
+    String s;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        s = ((global_vars) this.getApplication()).getSomeVariable();
+        Toast.makeText(this, ""+s, Toast.LENGTH_SHORT).show();
         requestWindowFeature(Window.FEATURE_NO_TITLE); //will hide the title
         getSupportActionBar().hide(); // hide the title bar
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
@@ -77,6 +82,7 @@ public class TabActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 Intent i = new Intent(getApplicationContext(), HomeActivity.class);
                 startActivity(i);
             }

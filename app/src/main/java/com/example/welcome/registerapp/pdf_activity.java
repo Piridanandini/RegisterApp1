@@ -67,14 +67,15 @@ public class pdf_activity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        installation_db = FirebaseDatabase.getInstance().getReference("installation");
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pdf_activity);
         StrictMode.VmPolicy.Builder builder = new StrictMode.VmPolicy.Builder();
         StrictMode.setVmPolicy(builder.build());
-        installation_db.addValueEventListener(new ValueEventListener() {
+        installation_db = FirebaseDatabase.getInstance().getReference("installation");
+        installation_db.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 //clearing the previous artist list
                 arrayList_installation.clear();
                 //iterating through all the nodes
@@ -85,18 +86,21 @@ public class pdf_activity extends AppCompatActivity {
                 }
             }
 
+
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError) {
                 Toast.makeText(pdf_activity.this, "db error", Toast.LENGTH_SHORT).show();
-
             }
         });
+
+
 
         mCreateButton = (Button) findViewById(R.id.button_create);
         mCreateButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 String name = "installation";
+
 
                 try {
                     createPdfWrapper(name);
@@ -266,6 +270,26 @@ public class pdf_activity extends AppCompatActivity {
 
     }
     private void createPdf_requirements() throws FileNotFoundException, DocumentException {
+        installation_db = FirebaseDatabase.getInstance().getReference("requirements");
+        installation_db.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                //clearing the previous artist list
+                arrayList_requirements.clear();
+                //iterating through all the nodes
+                for (DataSnapshot postSnapshot : dataSnapshot.getChildren()) {
+                    //getting artist
+                    requirements install = postSnapshot.getValue(requirements.class);
+                    arrayList_requirements.add(install);
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+                Toast.makeText(pdf_activity.this, "db error", Toast.LENGTH_SHORT).show();
+
+            }
+        });
 
 
 
@@ -299,7 +323,7 @@ public class pdf_activity extends AppCompatActivity {
         table.addCell(new PdfPCell(new Phrase("pincode",fontH1)));
 
 
-        for (int i=0;i<arrayList_installation.size();i++)
+        for (int i=0;i<arrayList_requirements.size();i++)
         {
             requirements install = arrayList_requirements.get(i);
             Toast.makeText(this, "working"+arrayList_requirements.size(), Toast.LENGTH_SHORT).show();
@@ -323,6 +347,29 @@ public class pdf_activity extends AppCompatActivity {
     }
 
     private void createPdf_services() throws FileNotFoundException, DocumentException {
+
+        installation_db = FirebaseDatabase.getInstance().getReference("services");
+        installation_db.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                //clearing the previous artist list
+                arrayList_services.clear();
+                //iterating through all the nodes
+                for (DataSnapshot postSnapshot : dataSnapshot.getChildren()) {
+                    //getting artist
+                    service install = postSnapshot.getValue(service.class);
+                    arrayList_services.add(install);
+                }
+
+                Toast.makeText(pdf_activity.this, arrayList_services.size(), Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+                Toast.makeText(pdf_activity.this, "db error", Toast.LENGTH_SHORT).show();
+
+            }
+        });
 
 
 
@@ -376,6 +423,7 @@ public class pdf_activity extends AppCompatActivity {
             table.addCell(new PdfPCell(new Phrase(install.getService_engineer_name(),fontP1)));
             table.addCell(new PdfPCell(new Phrase(install.getSite_incharge_name(),fontP1)));
             table.addCell(new PdfPCell(new Phrase(install.getAuthorised_person(),fontP1)));
+            Toast.makeText(this, ""+arrayList_services.size(), Toast.LENGTH_SHORT).show();
         }
 
         document.add(table);

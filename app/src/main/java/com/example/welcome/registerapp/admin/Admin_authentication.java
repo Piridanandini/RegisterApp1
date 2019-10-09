@@ -7,13 +7,16 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.EditText;
 import android.widget.ImageButton;
+import android.widget.Toast;
 
 import com.example.welcome.registerapp.HomeActivity;
 import com.example.welcome.registerapp.R;
 
 public class Admin_authentication extends AppCompatActivity {
     ImageButton button;
+    EditText edituser,editpass;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,7 +28,8 @@ public class Admin_authentication extends AppCompatActivity {
         setContentView(R.layout.activity_admin_authentication);
 
 
-
+        edituser = findViewById(R.id.EditUser);
+        editpass = findViewById(R.id.EditPass);
         button = findViewById(R.id.AdminBack);
 
 
@@ -33,8 +37,14 @@ public class Admin_authentication extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i = new Intent(getApplicationContext(), HomeActivity.class);
-                startActivity(i);
+                String s = String.valueOf(edituser.getText());
+                String p = String.valueOf(editpass.getText());
+                if(s.equals("tracalogic") && p.equals("tracalogic@123"))
+                {
+                    Toast.makeText(Admin_authentication.this, "you are now an admin, You can now update or delete from database", Toast.LENGTH_SHORT).show();
+                    ((global_vars) getApplication()).setSomeVariable("foo");
+                }
+
             }
 
         });

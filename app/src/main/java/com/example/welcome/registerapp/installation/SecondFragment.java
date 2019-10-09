@@ -20,6 +20,7 @@ import android.widget.Toast;
 
 import com.example.welcome.registerapp.R;
 import com.example.welcome.registerapp.VehicleNames;
+import com.example.welcome.registerapp.admin.global_vars;
 import com.example.welcome.registerapp.database.installation;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -63,6 +64,7 @@ public class SecondFragment extends Fragment {
         installationList.setDivider(null);
 
 
+
         installation_db.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
@@ -83,7 +85,7 @@ public class SecondFragment extends Fragment {
 
             @Override
             public void onCancelled(DatabaseError databaseError) {
-
+                Toast.makeText(getActivity(), "db error", Toast.LENGTH_SHORT).show();
             }
         });
 
