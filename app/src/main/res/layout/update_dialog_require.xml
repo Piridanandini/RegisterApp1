@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="16dp">
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
 
 
 
@@ -45,7 +45,7 @@
                 <TextView
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
-                    android:text="Vehicle Type:"
+                    android:text="No of Devices:"
                     android:textSize="15dp"
                     android:textColor="@color/black"
                     android:layout_marginTop="20dp"
@@ -53,19 +53,29 @@
                     android:id="@+id/VehicleType"/>
 
 
+
                 <EditText
-                    android:id="@+id/text"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="130dp"
-                    android:layout_marginTop="-30dp"
+                    android:textSize="18dp"
                     android:textColor="@color/black"
-                    android:textSize="18dp" />
+                    android:layout_marginTop="-40dp"
+                    android:layout_marginLeft="130dp"
+                    android:id="@+id/text"/>
+
+
+
+
+
+
+
+
+
 
                 <TextView
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
-                    android:text="Vehicle No:"
+                    android:text="Type of Devices:"
                     android:textSize="15dp"
                     android:textColor="@color/black"
                     android:layout_marginTop="15dp"
@@ -78,9 +88,39 @@
                     android:layout_height="wrap_content"
                     android:textSize="18dp"
                     android:textColor="@color/black"
-                    android:layout_marginTop="-30dp"
+                    android:layout_marginTop="-40dp"
                     android:layout_marginLeft="130dp"
                     android:id="@+id/text1"/>
+
+
+
+
+
+
+
+
+
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="Region/state:"
+                    android:textSize="15dp"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginLeft="20dp"
+                    android:id="@+id/AssetCode"/>
+
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="18dp"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="-40dp"
+                    android:layout_marginLeft="130dp"
+                    android:id="@+id/text12"/>
+
 
 
 
@@ -101,7 +141,7 @@
                 <TextView
                     android:layout_width="110dp"
                     android:layout_height="wrap_content"
-                    android:text="Device IMEI No:"
+                    android:text="Device Name:"
                     android:textSize="15dp"
                     android:textColor="@color/black"
                     android:layout_marginTop="15dp"
@@ -114,7 +154,7 @@
                     android:layout_height="wrap_content"
                     android:textSize="18dp"
                     android:textColor="@color/black"
-                    android:layout_marginTop="-30dp"
+                    android:layout_marginTop="-40dp"
                     android:layout_marginLeft="130dp"
                     android:id="@+id/text2"/>
 
@@ -129,7 +169,7 @@
                 <TextView
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
-                    android:text="Device Name:"
+                    android:text="Site Name:"
                     android:textSize="15dp"
                     android:textColor="@color/black"
                     android:layout_marginTop="15dp"
@@ -142,7 +182,7 @@
                     android:layout_height="wrap_content"
                     android:textSize="18dp"
                     android:textColor="@color/black"
-                    android:layout_marginTop="-30dp"
+                    android:layout_marginTop="-40dp"
                     android:layout_marginLeft="130dp"
                     android:id="@+id/text3"/>
 
@@ -159,7 +199,7 @@
                 <TextView
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
-                    android:text="SIM Name:"
+                    android:text="Email:"
                     android:textSize="15dp"
                     android:textColor="@color/black"
                     android:layout_marginTop="15dp"
@@ -171,7 +211,7 @@
                     android:layout_height="wrap_content"
                     android:textSize="18dp"
                     android:textColor="@color/black"
-                    android:layout_marginTop="-30dp"
+                    android:layout_marginTop="-40dp"
                     android:layout_marginLeft="130dp"
                     android:id="@+id/text4"/>
 
@@ -187,7 +227,7 @@
                 <TextView
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
-                    android:text="SIM IMEI No:"
+                    android:text="Mobile No:"
                     android:textSize="15dp"
                     android:textColor="@color/black"
                     android:layout_marginTop="15dp"
@@ -199,7 +239,7 @@
                     android:layout_height="wrap_content"
                     android:textSize="18dp"
                     android:textColor="@color/black"
-                    android:layout_marginTop="-30dp"
+                    android:layout_marginTop="-40dp"
                     android:layout_marginLeft="130dp"
                     android:id="@+id/text5"/>
 
@@ -213,7 +253,7 @@
                 <TextView
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
-                    android:text="SIM No:"
+                    android:text="Address:"
                     android:textSize="15dp"
                     android:textColor="@color/black"
                     android:layout_marginTop="15dp"
@@ -225,7 +265,7 @@
                     android:layout_height="wrap_content"
                     android:textSize="18dp"
                     android:textColor="@color/black"
-                    android:layout_marginTop="-30dp"
+                    android:layout_marginTop="-40dp"
                     android:layout_marginLeft="130dp"
                     android:id="@+id/text6"/>
 
@@ -242,7 +282,7 @@
                 <TextView
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
-                    android:text="Location:"
+                    android:text="Pincode:"
                     android:textSize="15dp"
                     android:textColor="@color/black"
                     android:layout_marginTop="15dp"
@@ -258,106 +298,10 @@
                     android:layout_height="wrap_content"
                     android:textSize="18dp"
                     android:textColor="@color/black"
-                    android:layout_marginTop="-30dp"
+                    android:layout_marginTop="-40dp"
                     android:layout_marginLeft="130dp"
                     android:id="@+id/text7"/>
 
-                <TextView
-                    android:layout_width="100dp"
-                    android:layout_height="wrap_content"
-                    android:text="Service Time:"
-                    android:textSize="15dp"
-                    android:textColor="@color/black"
-                    android:layout_marginTop="15dp"
-                    android:layout_marginLeft="20dp"
-                    android:id="@+id/ServiceTime"/>
-
-
-                <EditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textSize="18dp"
-                    android:textColor="@color/black"
-                    android:layout_marginTop="-30dp"
-                    android:layout_marginLeft="130dp"
-                    android:id="@+id/text8"/>
-
-
-
-
-
-
-                <TextView
-                    android:layout_width="110dp"
-                    android:layout_height="wrap_content"
-                    android:text="Service Engineer Name:"
-                    android:textSize="15dp"
-                    android:textColor="@color/black"
-                    android:layout_marginTop="15dp"
-                    android:layout_marginLeft="20dp"
-                    android:id="@+id/ServiceEngineer"/>
-
-
-                <EditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textSize="18dp"
-                    android:textColor="@color/black"
-                    android:layout_marginTop="-30dp"
-                    android:layout_marginLeft="130dp"
-                    android:id="@+id/text9"/>
-
-
-
-
-
-
-
-
-
-                <TextView
-                    android:layout_width="110dp"
-                    android:layout_height="wrap_content"
-                    android:text="Site Incharge Name:"
-                    android:textSize="15dp"
-                    android:textColor="@color/black"
-                    android:layout_marginTop="15dp"
-                    android:layout_marginLeft="20dp"
-                    android:id="@+id/SiteIncharge"/>
-
-
-                <EditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textSize="18dp"
-                    android:textColor="@color/black"
-                    android:layout_marginTop="-30dp"
-                    android:layout_marginLeft="130dp"
-                    android:id="@+id/text10"/>
-
-
-
-
-
-
-                <TextView
-                    android:layout_width="110dp"
-                    android:layout_height="wrap_content"
-                    android:text="Authorized Person:"
-                    android:textSize="15dp"
-                    android:textColor="@color/black"
-                    android:layout_marginTop="15dp"
-                    android:layout_marginLeft="20dp"
-                    android:id="@+id/AuthorisedPerson"/>
-
-                <EditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:textSize="18dp"
-                    android:textColor="@color/black"
-                    android:layout_marginTop="-30dp"
-                    android:layout_marginLeft="130dp"
-                    android:id="@+id/text11"/>
 
 
 
@@ -386,35 +330,9 @@
 
 
 
-
-
             </LinearLayout>
         </ScrollView>
     </FrameLayout>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

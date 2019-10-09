@@ -33,6 +33,7 @@ import java.util.ArrayList;
 public class SecondFragment extends Fragment {
     private ListView installationList;
     private TextView installationId,vehicle_type,vehicle_no, device_name, device_imei_no, sim_name, sim_imei_no, sim_no, location, service_time, service_engineer_name, site_incharge_name, authorised_person;
+
     ListViewAdapter adapter;
     DatabaseReference installation_db;
     ArrayList<installation> arrayList = new ArrayList<installation>();
@@ -155,22 +156,51 @@ public class SecondFragment extends Fragment {
         installationList.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
             @Override
             public boolean onItemLongClick(AdapterView<?> adapterView, View view, int i, long l) {
-                installation install = arrayList.get(i);
-                showUpdateDeleteDialog(install.getInstallationId(), install.getVehicle_no());
+                EditText installationId,vehicle_type,vehicle_no, device_name, device_imei_no, sim_name, sim_imei_no, sim_no, location, service_time, service_engineer_name, site_incharge_name, authorised_person;
+
+                installation artist = arrayList.get(i);
+                showUpdateDeleteDialog(artist,artist.getInstallationId(), artist.getVehicle_no());
                 return true;
             }
         });
         return view;
     }
 
-    private void showUpdateDeleteDialog(final String artistId, String artistName) {
+    private void showUpdateDeleteDialog(installation artist, final String artistId, String artistName) {
+
         AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(getActivity());
         LayoutInflater inflater = getLayoutInflater();
-        final View dialogView = inflater.inflate(R.layout.update_dialog, null);
-        dialogBuilder.setView(dialogView);
-        final Button buttonUpdate = (Button) dialogView.findViewById(R.id.buttonUpdateArtist);
-        final Button buttonDelete = (Button) dialogView.findViewById(R.id.buttonDeleteArtist);
-        dialogBuilder.setTitle(artistName.toUpperCase());
+        final View view1 = inflater.inflate(R.layout.update_dialog, null);
+        vehicle_type = view1.findViewById(R.id.text);
+        vehicle_no = view1.findViewById(R.id.text1);
+        device_name = view1.findViewById(R.id.text2);
+        device_imei_no = view1.findViewById(R.id.text3);
+        sim_name = view1.findViewById(R.id.text4);
+        sim_imei_no = view1.findViewById(R.id.text5);
+        sim_no = view1.findViewById(R.id.text6);
+        location = view1.findViewById(R.id.text7);
+        service_time = view1.findViewById(R.id.text8);
+        service_engineer_name = view1.findViewById(R.id.text9);
+        site_incharge_name = view1.findViewById(R.id.text10);
+        authorised_person = view1.findViewById(R.id.text11);
+
+        vehicle_type.setText(artist.getVehicle_type());
+        vehicle_no.setText(artist.getVehicle_no());
+        device_name.setText(artist.getDevice_name());
+        device_imei_no.setText(artist.getDevice_imei_no());
+        sim_name.setText(artist.getSim_name());
+        sim_imei_no.setText(artist.getSim_imei_no());
+        sim_no.setText(artist.getSim_no());
+        location.setText(artist.getLocation());
+        service_time.setText(artist.getService_time());
+        service_engineer_name.setText(artist.getService_engineer_name());
+        site_incharge_name.setText(artist.getSite_incharge_name());
+        authorised_person.setText(artist.getAuthorised_person());
+
+        dialogBuilder.setView(view1);
+        final Button buttonUpdate =  view1.findViewById(R.id.buttonUpdateArtist);
+        final Button buttonDelete = view1.findViewById(R.id.buttonDeleteArtist);
+//        dialogBuilder.setTitle(""+artistName.toUpperCase());
         final AlertDialog b = dialogBuilder.create();
         b.show();
 

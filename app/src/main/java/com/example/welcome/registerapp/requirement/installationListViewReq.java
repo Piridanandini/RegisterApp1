@@ -9,7 +9,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.welcome.registerapp.R;
-import com.example.welcome.registerapp.database.installation;
 import com.example.welcome.registerapp.database.requirements;
 
 
@@ -37,11 +36,10 @@ public class installationListViewReq extends ArrayAdapter<requirements> {
         TextView device_name = listViewItem.findViewById(R.id.textView9);
         TextView region = listViewItem.findViewById(R.id.textView10);
         requirements install = installationListReq.get(position);
-        No_of_device.setText(install.getNoofDevice());
-        site_name.setText(install.getDeviceName());
+        No_of_device.setText(install.getNoofdevice());
+        site_name.setText(install.getDevicename());
         device_name.setText(install.getRegion());
-        region.setText(install.getSiteName());
-        Toast.makeText(context, install.getSiteName(), Toast.LENGTH_SHORT).show();
+        region.setText(install.getSitename());
         return listViewItem;
     }
 

@@ -22,12 +22,12 @@ import android.widget.Toast;
 
 import com.example.welcome.registerapp.R;
 import com.example.welcome.registerapp.VehicleNames;
-import com.example.welcome.registerapp.database.installation;
+
 import com.example.welcome.registerapp.database.requirements;
-import com.example.welcome.registerapp.database.service;
+
 import com.example.welcome.registerapp.installation.ListViewAdapter;
 import com.example.welcome.registerapp.installation.installationListView;
-import com.example.welcome.registerapp.service.installationListViewService;
+
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -75,7 +75,7 @@ public class FourthReqFragment extends Fragment {
                     //getting artist
                     requirements install = postSnapshot.getValue(requirements.class);
                     arrayList.add(install);
-                    Toast.makeText(getActivity(), arrayList.size(), Toast.LENGTH_SHORT).show();
+
 
                 }
                 //creating adapter
@@ -110,13 +110,17 @@ public class FourthReqFragment extends Fragment {
                 mobile_no = view1.findViewById(R.id.text5);
                 address= view1.findViewById(R.id.text6);
                 pincode = view1.findViewById(R.id.text7);
-                no_of_device.setText(artist.getNoofDevice());
-                type_of_device.setText(artist.getTypeofDevice());
+
+
+
+
+                no_of_device.setText(artist.getNoofdevice());
+                type_of_device.setText(artist.getTypeofdevice());
                region.setText(artist.getRegion());
-                device_name.setText(artist.getDeviceName());
-                site_name.setText(artist.getSiteName());
+                device_name.setText(artist.getDevicename());
+                site_name.setText(artist.getSitename());
                email.setText(artist.getEmail());
-               mobile_no.setText(artist.getMobileNo());
+               mobile_no.setText(artist.getMobileno());
                 address.setText(artist.getAddress());
                pincode.setText(artist.getPincode());
                alertDialog.setView(view1);
@@ -147,22 +151,46 @@ public class FourthReqFragment extends Fragment {
         installationListReq.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
             @Override
             public boolean onItemLongClick(AdapterView<?> adapterView, View view, int i, long l) {
-                requirements install = arrayList.get(i);
-                //showUpdateDeleteDialog(install.getInstallationId(), install.getNoofDevice());
+                 EditText no_of_device,type_of_device,region,device_name,site_name,email,mobile_no,address,pincode;
+
+                requirements artist = arrayList.get(i);
+                showUpdateDeleteDialog(artist,artist.getInstallationId(), artist.getNoofdevice());
                 return true;
             }
         });
         return view;
     }
 
-    private void showUpdateDeleteDialog(final String artistId, String artistName) {
+    private void showUpdateDeleteDialog(requirements artist, final String artistId, String artistName) {
         AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(getActivity());
         LayoutInflater inflater = getLayoutInflater();
-        final View dialogView = inflater.inflate(R.layout.update_dialog, null);
+        final View dialogView = inflater.inflate(R.layout.update_dialog_require, null);
+
+        no_of_device = dialogView.findViewById(R.id.text);
+        type_of_device = dialogView.findViewById(R.id.text1);
+        region=dialogView.findViewById(R.id.text12);
+        device_name = dialogView.findViewById(R.id.text2);
+        site_name = dialogView.findViewById(R.id.text3);
+        email = dialogView.findViewById(R.id.text4);
+        mobile_no = dialogView.findViewById(R.id.text5);
+        address= dialogView.findViewById(R.id.text6);
+        pincode = dialogView.findViewById(R.id.text7);
+
+
+
+
+        no_of_device.setText(artist.getNoofdevice());
+        type_of_device.setText(artist.getTypeofdevice());
+        region.setText(artist.getRegion());
+        device_name.setText(artist.getDevicename());
+        site_name.setText(artist.getSitename());
+        email.setText(artist.getEmail());
+        mobile_no.setText(artist.getMobileno());
+        address.setText(artist.getAddress());
+        pincode.setText(artist.getPincode());
         dialogBuilder.setView(dialogView);
         final Button buttonUpdate = (Button) dialogView.findViewById(R.id.buttonUpdateArtist);
         final Button buttonDelete = (Button) dialogView.findViewById(R.id.buttonDeleteArtist);
-        dialogBuilder.setTitle(artistName.toUpperCase());
         final AlertDialog b = dialogBuilder.create();
         b.show();
 
@@ -186,7 +214,7 @@ public class FourthReqFragment extends Fragment {
 
     private boolean deleteArtist(String id) {
         //getting the specified artist reference
-        DatabaseReference dR = FirebaseDatabase.getInstance().getReference("services").child(id);
+        DatabaseReference dR = FirebaseDatabase.getInstance().getReference("requirements").child(id);
         //removing artist
         dR.removeValue();
 

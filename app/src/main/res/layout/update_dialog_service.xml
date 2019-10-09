@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="16dp">
-
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
 
     <FrameLayout
@@ -45,7 +42,7 @@
                 <TextView
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
-                    android:text="Vehicle Type:"
+                    android:text="Service date:"
                     android:textSize="15dp"
                     android:textColor="@color/black"
                     android:layout_marginTop="20dp"
@@ -53,14 +50,24 @@
                     android:id="@+id/VehicleType"/>
 
 
+
                 <EditText
-                    android:id="@+id/text"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginLeft="130dp"
-                    android:layout_marginTop="-30dp"
+                    android:textSize="18dp"
                     android:textColor="@color/black"
-                    android:textSize="18dp" />
+                    android:layout_marginTop="-40dp"
+                    android:layout_marginLeft="130dp"
+                    android:id="@+id/text"/>
+
+
+
+
+
+
+
+
+
 
                 <TextView
                     android:layout_width="100dp"
@@ -78,9 +85,39 @@
                     android:layout_height="wrap_content"
                     android:textSize="18dp"
                     android:textColor="@color/black"
-                    android:layout_marginTop="-30dp"
+                    android:layout_marginTop="-40dp"
                     android:layout_marginLeft="130dp"
                     android:id="@+id/text1"/>
+
+
+
+
+
+
+
+
+
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:text="Asset_Code:"
+                    android:textSize="15dp"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginLeft="20dp"
+                    android:id="@+id/AssetCode"/>
+
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="18dp"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="-40dp"
+                    android:layout_marginLeft="130dp"
+                    android:id="@+id/text12"/>
+
 
 
 
@@ -114,7 +151,7 @@
                     android:layout_height="wrap_content"
                     android:textSize="18dp"
                     android:textColor="@color/black"
-                    android:layout_marginTop="-30dp"
+                    android:layout_marginTop="-40dp"
                     android:layout_marginLeft="130dp"
                     android:id="@+id/text2"/>
 
@@ -142,7 +179,7 @@
                     android:layout_height="wrap_content"
                     android:textSize="18dp"
                     android:textColor="@color/black"
-                    android:layout_marginTop="-30dp"
+                    android:layout_marginTop="-40dp"
                     android:layout_marginLeft="130dp"
                     android:id="@+id/text3"/>
 
@@ -171,7 +208,7 @@
                     android:layout_height="wrap_content"
                     android:textSize="18dp"
                     android:textColor="@color/black"
-                    android:layout_marginTop="-30dp"
+                    android:layout_marginTop="-40dp"
                     android:layout_marginLeft="130dp"
                     android:id="@+id/text4"/>
 
@@ -199,7 +236,7 @@
                     android:layout_height="wrap_content"
                     android:textSize="18dp"
                     android:textColor="@color/black"
-                    android:layout_marginTop="-30dp"
+                    android:layout_marginTop="-40dp"
                     android:layout_marginLeft="130dp"
                     android:id="@+id/text5"/>
 
@@ -225,7 +262,7 @@
                     android:layout_height="wrap_content"
                     android:textSize="18dp"
                     android:textColor="@color/black"
-                    android:layout_marginTop="-30dp"
+                    android:layout_marginTop="-40dp"
                     android:layout_marginLeft="130dp"
                     android:id="@+id/text6"/>
 
@@ -258,7 +295,7 @@
                     android:layout_height="wrap_content"
                     android:textSize="18dp"
                     android:textColor="@color/black"
-                    android:layout_marginTop="-30dp"
+                    android:layout_marginTop="-40dp"
                     android:layout_marginLeft="130dp"
                     android:id="@+id/text7"/>
 
@@ -278,7 +315,7 @@
                     android:layout_height="wrap_content"
                     android:textSize="18dp"
                     android:textColor="@color/black"
-                    android:layout_marginTop="-30dp"
+                    android:layout_marginTop="-40dp"
                     android:layout_marginLeft="130dp"
                     android:id="@+id/text8"/>
 
@@ -303,7 +340,7 @@
                     android:layout_height="wrap_content"
                     android:textSize="18dp"
                     android:textColor="@color/black"
-                    android:layout_marginTop="-30dp"
+                    android:layout_marginTop="-40dp"
                     android:layout_marginLeft="130dp"
                     android:id="@+id/text9"/>
 
@@ -331,7 +368,7 @@
                     android:layout_height="wrap_content"
                     android:textSize="18dp"
                     android:textColor="@color/black"
-                    android:layout_marginTop="-30dp"
+                    android:layout_marginTop="-40dp"
                     android:layout_marginLeft="130dp"
                     android:id="@+id/text10"/>
 
@@ -355,10 +392,9 @@
                     android:layout_height="wrap_content"
                     android:textSize="18dp"
                     android:textColor="@color/black"
-                    android:layout_marginTop="-30dp"
+                    android:layout_marginTop="-40dp"
                     android:layout_marginLeft="130dp"
                     android:id="@+id/text11"/>
-
 
 
                 <Button
@@ -388,35 +424,9 @@
 
 
 
+
             </LinearLayout>
         </ScrollView>
     </FrameLayout>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 </LinearLayout>
