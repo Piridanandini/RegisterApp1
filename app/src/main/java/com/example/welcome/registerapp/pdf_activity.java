@@ -56,7 +56,7 @@ public class pdf_activity extends AppCompatActivity {
 
     private static final String TAG = "PdfCreatorActivity";
     private EditText mContentEditText;
-    private Button mCreateButton;
+    private Button mCreateButton,button_req,button_ser;
     private File pdfFile;
     DatabaseReference installation_db;
     ArrayList<installation> arrayList_installation = new ArrayList<>();
@@ -105,6 +105,40 @@ public class pdf_activity extends AppCompatActivity {
                 } catch (DocumentException e) {
                     e.printStackTrace();
                 }
+            }
+        });
+
+        button_req = findViewById(R.id.button_create2);
+        button_req.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String name = "requirements";
+
+                try {
+                    createPdfWrapper(name);
+                } catch (FileNotFoundException e) {
+                    e.printStackTrace();
+                } catch (DocumentException e) {
+                    e.printStackTrace();
+                }
+
+            }
+        });
+
+        button_ser = findViewById(R.id.button_create3);
+        button_ser.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String name = "services";
+
+                try {
+                    createPdfWrapper(name);
+                } catch (FileNotFoundException e) {
+                    e.printStackTrace();
+                } catch (DocumentException e) {
+                    e.printStackTrace();
+                }
+
             }
         });
 
