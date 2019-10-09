@@ -12,6 +12,8 @@ import android.widget.ImageButton;
 
 import com.example.welcome.registerapp.admin.Admin_authentication;
 
+import java.util.Objects;
+
 public class SettingActivity extends AppCompatActivity {
     ImageButton buttonn;
 
@@ -19,7 +21,7 @@ public class SettingActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         requestWindowFeature(Window.FEATURE_NO_TITLE); //will hide the title
-        getSupportActionBar().hide(); // hide the title bar3
+        Objects.requireNonNull(getSupportActionBar()).hide(); // hide the title bar3
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
                 WindowManager.LayoutParams.FLAG_FULLSCREEN); //enable full screen
         setContentView(R.layout.activity_setting);

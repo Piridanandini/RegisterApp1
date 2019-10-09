@@ -59,7 +59,7 @@ public class FourthReqFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        installation_db1 = FirebaseDatabase.getInstance().getReference("services");
+        installation_db1 = FirebaseDatabase.getInstance().getReference("requirements");
         View view = inflater.inflate(R.layout.fragment_fourth_req, container, false);
         installationListReq = view.findViewById(R.id.listViewreq);
         installationListReq.setDivider(null);
@@ -74,8 +74,8 @@ public class FourthReqFragment extends Fragment {
                 for (DataSnapshot postSnapshot : dataSnapshot.getChildren()) {
                     //getting artist
                     requirements install = postSnapshot.getValue(requirements.class);
-
                     arrayList.add(install);
+                    Toast.makeText(getActivity(), arrayList.size(), Toast.LENGTH_SHORT).show();
 
                 }
                 //creating adapter
@@ -98,7 +98,6 @@ public class FourthReqFragment extends Fragment {
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 //getting the selected artist
                 requirements artist = arrayList.get(i);
-
                 AlertDialog.Builder alertDialog = new AlertDialog.Builder(Objects.requireNonNull(getActivity()));
                 LayoutInflater inflater = getLayoutInflater();
                 View view1 = inflater.inflate(R.layout.customreq, null);

@@ -5,7 +5,6 @@ import com.google.firebase.database.IgnoreExtraProperties;
 @IgnoreExtraProperties
 public class installation {
 
-
     private String installationId;
     private String vehicle_type;
     private String vehicle_no;
