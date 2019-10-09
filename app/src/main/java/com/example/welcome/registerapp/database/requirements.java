@@ -2,72 +2,81 @@ package com.example.welcome.registerapp.database;
 
 public class requirements {
 
-    public requirements(String installationId, String noofDevice, String typeofDevice, String region, String deviceName, String siteName, String email, String mobileNo, String address, String pincode) {
-        this.installationId = installationId;
-        NoofDevice = noofDevice;
-        TypeofDevice = typeofDevice;
-        Region = region;
-        DeviceName = deviceName;
-        SiteName = siteName;
-        Email = email;
-        MobileNo = mobileNo;
-        Address = address;
-        Pincode = pincode;
-    }
-
     private String installationId;
-    private String NoofDevice;
-    private String TypeofDevice;
+    private String noofdevice;
 
     public String getInstallationId() {
         return installationId;
     }
 
-    public String getNoofDevice() {
-        return NoofDevice;
+    public String getNoofdevice() {
+        return noofdevice;
     }
 
-    public String getTypeofDevice() {
-        return TypeofDevice;
+    public String getTypeofdevice() {
+        return typeofdevice;
     }
 
     public String getRegion() {
-        return Region;
+        return region;
     }
 
-    public String getDeviceName() {
-        return DeviceName;
+    public String getDevicename() {
+        return devicename;
     }
 
-    public String getSiteName() {
-        return SiteName;
+    public String getSitename() {
+        return sitename;
     }
 
     public String getEmail() {
-        return Email;
+        return email;
     }
 
-    public String getMobileNo() {
-        return MobileNo;
+    public String getMobileno() {
+        return mobileno;
     }
 
     public String getAddress() {
-        return Address;
+        return address;
     }
 
     public String getPincode() {
-        return Pincode;
+        return pincode;
     }
 
-    private String Region;
-    private String DeviceName;
-    private String SiteName;
-    private String Email;
-    private String MobileNo;
-    private String Address;
-    private String Pincode;
+    private String typeofdevice;
+    private String region;
 
-    public requirements(){
+
+
+    private String devicename;
+    private String sitename;
+    private String email;
+    private String mobileno;
+    private String address;
+    private String pincode;
+
+    public requirements(String installationId, String noofdevice, String typeofdevice, String region, String devicename, String sitename, String email, String mobileno, String address, String pincode) {
+        this.installationId = installationId;
+        this.noofdevice = noofdevice;
+        this.typeofdevice = typeofdevice;
+        this.region = region;
+        this.devicename = devicename;
+        this.sitename = sitename;
+        this.email = email;
+        this.mobileno = mobileno;
+        this.address = address;
+        this.pincode = pincode;
+    }
+
+
+    public requirements() {
         //empty constructor
     }
+
+
+
+
+
 }
