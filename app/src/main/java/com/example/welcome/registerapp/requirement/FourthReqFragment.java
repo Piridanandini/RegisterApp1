@@ -41,10 +41,10 @@ import java.util.Objects;
 
 public class FourthReqFragment extends Fragment {
     private ListView installationListReq;
-    installationListViewReq Adapter1;
+    private installationListViewReq Adapter1;
     private TextView no_of_device,type_of_device,region,device_name,site_name,email,mobile_no,address,pincode;
-    DatabaseReference installation_db1;
-    List<requirements> arrayList = new ArrayList<requirements>();
+    private DatabaseReference installation_db1;
+    private List<requirements> arrayList = new ArrayList<requirements>();
 
 
     public FourthReqFragment() {

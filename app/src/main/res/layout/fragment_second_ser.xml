@@ -318,51 +318,6 @@
 
                 </com.google.android.material.textfield.TextInputLayout>
 
-
-
-
-
-
-                <ImageView
-                    android:id="@+id/vehicle_photo"
-                    android:layout_width="150dp"
-                    android:layout_height="150dp"
-                    app:srcCompat="@mipmap/ic_launcher"
-                    android:layout_below="@+id/edtPrice"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentStart="true"
-                    android:layout_marginTop="18dp"
-                    android:layout_marginLeft="55dp"/>
-
-                <Button
-                    android:id="@+id/btnChoose"
-                    android:text="Vehicle image"
-                    android:textColor="#000"
-                    android:layout_width="100dp"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="45dp"
-                    android:layout_alignBottom="@+id/imageView"
-                    android:layout_toRightOf="@+id/imageView"
-                    android:layout_toEndOf="@+id/imageView"
-                    android:layout_marginLeft="40dp"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="10dp"
-                    android:background="@drawable/edit"/>
-
-                <Button
-                    android:id="@+id/btnAdd"
-                    android:text="Add"
-                    android:textColor="#000"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/imageView"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginTop="-95dp"
-                    android:layout_marginLeft="150dp"
-                    android:background="@drawable/edit"
-                    />
-
-
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/engineer_name_layout"
                     android:layout_width="match_parent"
@@ -442,13 +397,11 @@
                 </com.google.android.material.textfield.TextInputLayout>
 
 
-
-
-
-                <Button android:id="@+id/signup"
-                    android:layout_width="100dp"
+                <Button
+                    android:id="@+id/PhotoButton"
+                    android:layout_width="200dp"
                     android:layout_height="wrap_content"
-                    android:text="Submit"
+                    android:text="Upload Vehicle Image"
                     android:background="@drawable/edit"
                     android:layout_marginTop="20dp"
                     android:textColor="#000"
@@ -466,7 +419,7 @@
                     android:layout_marginLeft="-250dp"
                     android:layout_marginTop="70dp"
                     android:background="#000000"
-                    android:layout_height="1dp"></TableRow>
+                    android:layout_height="1dp"/>
 
 
 

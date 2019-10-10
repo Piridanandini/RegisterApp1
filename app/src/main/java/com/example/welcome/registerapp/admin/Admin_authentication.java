@@ -7,15 +7,18 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.Toast;
 
 import com.example.welcome.registerapp.HomeActivity;
 import com.example.welcome.registerapp.R;
+import com.example.welcome.registerapp.SettingActivity;
 
 public class Admin_authentication extends AppCompatActivity {
-    ImageButton button;
+    Button button;
+    ImageButton buttonn;
     EditText edituser,editpass;
 
     @Override
@@ -30,7 +33,7 @@ public class Admin_authentication extends AppCompatActivity {
 
         edituser = findViewById(R.id.EditUser);
         editpass = findViewById(R.id.EditPass);
-        button = findViewById(R.id.AdminBack);
+        button = findViewById(R.id.buttonContinue);
 
 
 
@@ -46,6 +49,20 @@ public class Admin_authentication extends AppCompatActivity {
                     ((global_vars) getApplication()).setSomeVariable("admin");
                 }
 
+            }
+
+        });
+
+
+        buttonn = findViewById(R.id.AdminBack);
+
+
+
+        buttonn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(getApplicationContext(), SettingActivity.class);
+                startActivity(i);
             }
 
         });

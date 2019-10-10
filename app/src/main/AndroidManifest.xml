@@ -4,13 +4,11 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-
-
 
     <application
         android:name=".admin.global_vars"
@@ -22,15 +20,21 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".SettingActivity"
-            android:noHistory="true" ></activity>
-        <activity android:name=".admin.Admin_authentication"
-            android:noHistory="true"/>
-        <activity android:name=".requirement.Tab3Activity"
-            android:noHistory="true"/>
-        <activity android:name=".authentication.phone_login_activity"
-            android:noHistory="true"/>
-        <activity android:name=".SplashActivity"
+        <activity android:name=".service.ServiceimageActivity"></activity>
+        <activity
+            android:name=".SettingActivity"
+            android:noHistory="true" />
+        <activity
+            android:name=".admin.Admin_authentication"
+            android:noHistory="true" />
+        <activity
+            android:name=".requirement.Tab3Activity"
+            android:noHistory="true" />
+        <activity
+            android:name=".authentication.phone_login_activity"
+            android:noHistory="true" />
+        <activity
+            android:name=".SplashActivity"
             android:noHistory="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -51,17 +55,16 @@
             </intent-filter>
         </activity>
         <activity android:name=".MainActivity" />
-        <activity android:name=".WelcomeActivity"
-            android:noHistory="true"/>
+        <activity
+            android:name=".WelcomeActivity"
+            android:noHistory="true" />
         <activity
             android:name=".installation.TabActivity"
             android:noHistory="true" />
         <activity
             android:name=".service.Tab2Activity"
             android:noHistory="true" />
-        <activity android:name=".HomeActivity"
-
-            />
+        <activity android:name=".HomeActivity" />
         <activity
             android:name=".planner.PlannerActivity"
             android:noHistory="true" />
@@ -70,16 +73,8 @@
             android:name=".support.SupportActivity"
             android:noHistory="true" />
         <activity android:name=".database.add_installations" />
-        <activity android:name=".authentication.VerifyPhoneActivity"
-            />
+        <activity android:name=".authentication.VerifyPhoneActivity" />
         <activity android:name=".pdf_activity" />
-
-
     </application>
-
-
-
-
-
 
 </manifest>
