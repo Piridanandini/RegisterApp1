@@ -53,7 +53,7 @@ public class phone_login_activity extends AppCompatActivity {
 
                 String phoneNumber = "+" + code + number;
 
-                Intent intent = new Intent(phone_login_activity.this, HomeActivity.class);
+                Intent intent = new Intent(phone_login_activity.this, VerifyPhoneActivity.class);
                 intent.putExtra("phonenumber", phoneNumber);
                 startActivity(intent);
 
