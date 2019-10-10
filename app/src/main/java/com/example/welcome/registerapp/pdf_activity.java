@@ -156,9 +156,7 @@ public class pdf_activity extends AppCompatActivity {
 
                 try {
                     createPdfWrapper(name);
-                } catch (FileNotFoundException e) {
-                    e.printStackTrace();
-                } catch (DocumentException e) {
+                } catch (FileNotFoundException | DocumentException e) {
                     e.printStackTrace();
                 }
             }
