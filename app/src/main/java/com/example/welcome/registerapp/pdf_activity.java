@@ -21,6 +21,8 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.example.welcome.registerapp.database.installation;
@@ -58,7 +60,9 @@ public class pdf_activity extends AppCompatActivity {
     private EditText mContentEditText;
     private Button mCreateButton,button_req,button_ser;
     private File pdfFile;
-    DatabaseReference installation_db;
+    AlertDialog.Builder builder;
+    AlertDialog progressDialog;
+    DatabaseReference installation_db,installation_db2,installation_db3;
     ArrayList<installation> arrayList_installation = new ArrayList<>();
     ArrayList<requirements> arrayList_requirements = new ArrayList<>();
     ArrayList<service> arrayList_services = new ArrayList<>();
@@ -70,13 +74,18 @@ public class pdf_activity extends AppCompatActivity {
 
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pdf_activity);
+
+        progressDialog = getDialogProgressBar().create();
         StrictMode.VmPolicy.Builder builder = new StrictMode.VmPolicy.Builder();
         StrictMode.setVmPolicy(builder.build());
         installation_db = FirebaseDatabase.getInstance().getReference("installation");
+        progressDialog.show();
         installation_db.addListenerForSingleValueEvent(new ValueEventListener() {
+
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 //clearing the previous artist list
+                Toast.makeText(pdf_activity.this, "ondatachange", Toast.LENGTH_SHORT).show();
                 arrayList_installation.clear();
                 //iterating through all the nodes
                 for (DataSnapshot postSnapshot : dataSnapshot.getChildren()) {
@@ -93,6 +102,50 @@ public class pdf_activity extends AppCompatActivity {
             }
         });
 
+        installation_db2 = FirebaseDatabase.getInstance().getReference("requirements");
+        installation_db2.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                //clearing the previous artist list
+                arrayList_requirements.clear();
+                //iterating through all the nodes
+                for (DataSnapshot postSnapshot : dataSnapshot.getChildren()) {
+                    //getting artist
+                    requirements install = postSnapshot.getValue(requirements.class);
+                    arrayList_requirements.add(install);
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+                Toast.makeText(pdf_activity.this, "db error", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        installation_db3 = FirebaseDatabase.getInstance().getReference("services");
+        installation_db3.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                //clearing the previous artist list
+                arrayList_services.clear();
+                //iterating through all the nodes
+                for (DataSnapshot postSnapshot : dataSnapshot.getChildren()) {
+                    //getting artist
+                    service install = postSnapshot.getValue(service.class);
+                    arrayList_services.add(install);
+                }
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+                Toast.makeText(pdf_activity.this, "db error", Toast.LENGTH_SHORT).show();
+
+            }
+        });
+
+        progressDialog.dismiss();
+
 
 
         mCreateButton = (Button) findViewById(R.id.button_create);
@@ -100,7 +153,6 @@ public class pdf_activity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String name = "installation";
-
 
                 try {
                     createPdfWrapper(name);
@@ -248,7 +300,6 @@ public class pdf_activity extends AppCompatActivity {
         for (int i=0;i<arrayList_installation.size();i++)
         {
             installation install = arrayList_installation.get(i);
-            Toast.makeText(this, "working"+arrayList_installation.size(), Toast.LENGTH_SHORT).show();
             table.addCell(new PdfPCell(new Phrase(""+i,fontP1)));
             table.addCell(new PdfPCell(new Phrase(install.getVehicle_type(),fontP1)));
             table.addCell(new PdfPCell(new Phrase(install.getVehicle_no(),fontP1)));
@@ -263,33 +314,13 @@ public class pdf_activity extends AppCompatActivity {
             table.addCell(new PdfPCell(new Phrase(install.getSite_incharge_name(),fontP1)));
             table.addCell(new PdfPCell(new Phrase(install.getAuthorised_person(),fontP1)));
         }
-
         document.add(table);
         document.close();
         previewPdf();
 
     }
     private void createPdf_requirements() throws FileNotFoundException, DocumentException {
-        installation_db = FirebaseDatabase.getInstance().getReference("requirements");
-        installation_db.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                //clearing the previous artist list
-                arrayList_requirements.clear();
-                //iterating through all the nodes
-                for (DataSnapshot postSnapshot : dataSnapshot.getChildren()) {
-                    //getting artist
-                    requirements install = postSnapshot.getValue(requirements.class);
-                    arrayList_requirements.add(install);
-                }
-            }
 
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
-                Toast.makeText(pdf_activity.this, "db error", Toast.LENGTH_SHORT).show();
-
-            }
-        });
 
 
 
@@ -328,13 +359,13 @@ public class pdf_activity extends AppCompatActivity {
             requirements install = arrayList_requirements.get(i);
             Toast.makeText(this, "working"+arrayList_requirements.size(), Toast.LENGTH_SHORT).show();
             table.addCell(new PdfPCell(new Phrase(""+i,fontP1)));
-            table.addCell(new PdfPCell(new Phrase(install.getNoofDevice(),fontP1)));
-            table.addCell(new PdfPCell(new Phrase(install.getTypeofDevice(),fontP1)));
+            table.addCell(new PdfPCell(new Phrase(install.getNoofdevice(),fontP1)));
+            table.addCell(new PdfPCell(new Phrase(install.getTypeofdevice(),fontP1)));
             table.addCell(new PdfPCell(new Phrase(install.getRegion(),fontP1)));
-            table.addCell(new PdfPCell(new Phrase(install.getDeviceName(),fontP1)));
-            table.addCell(new PdfPCell(new Phrase(install.getSiteName(),fontP1)));
+            table.addCell(new PdfPCell(new Phrase(install.getDevicename(),fontP1)));
+            table.addCell(new PdfPCell(new Phrase(install.getSitename(),fontP1)));
             table.addCell(new PdfPCell(new Phrase(install.getEmail(),fontP1)));
-            table.addCell(new PdfPCell(new Phrase(install.getMobileNo(),fontP1)));
+            table.addCell(new PdfPCell(new Phrase(install.getMobileno(),fontP1)));
             table.addCell(new PdfPCell(new Phrase(install.getAddress(),fontP1)));
             table.addCell(new PdfPCell(new Phrase(install.getPincode(),fontP1)));
 
@@ -348,28 +379,7 @@ public class pdf_activity extends AppCompatActivity {
 
     private void createPdf_services() throws FileNotFoundException, DocumentException {
 
-        installation_db = FirebaseDatabase.getInstance().getReference("services");
-        installation_db.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                //clearing the previous artist list
-                arrayList_services.clear();
-                //iterating through all the nodes
-                for (DataSnapshot postSnapshot : dataSnapshot.getChildren()) {
-                    //getting artist
-                    service install = postSnapshot.getValue(service.class);
-                    arrayList_services.add(install);
-                }
 
-                Toast.makeText(pdf_activity.this, arrayList_services.size(), Toast.LENGTH_SHORT).show();
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
-                Toast.makeText(pdf_activity.this, "db error", Toast.LENGTH_SHORT).show();
-
-            }
-        });
 
 
 
@@ -456,6 +466,24 @@ public class pdf_activity extends AppCompatActivity {
 
 
     }
+
+    public AlertDialog.Builder getDialogProgressBar() {
+
+        if (builder == null) {
+            builder = new AlertDialog.Builder(this);
+
+            builder.setTitle("Loading...");
+
+            final ProgressBar progressBar = new ProgressBar(this);
+            LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(
+                    LinearLayout.LayoutParams.WRAP_CONTENT,
+                    LinearLayout.LayoutParams.WRAP_CONTENT);
+            progressBar.setLayoutParams(lp);
+            builder.setView(progressBar);
+        }
+        return builder;
+    }
+
 }
 
 

@@ -29,6 +29,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
+import java.util.Objects;
 
 
 public class SecondFragment extends Fragment {
@@ -158,10 +159,18 @@ public class SecondFragment extends Fragment {
         installationList.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
             @Override
             public boolean onItemLongClick(AdapterView<?> adapterView, View view, int i, long l) {
-                EditText installationId,vehicle_type,vehicle_no, device_name, device_imei_no, sim_name, sim_imei_no, sim_no, location, service_time, service_engineer_name, site_incharge_name, authorised_person;
+                String s="";
+                s = ((global_vars) Objects.requireNonNull(getActivity()).getApplication()).getSomeVariable();
+                if(s == null)
+                {
+                    Toast.makeText(getActivity(), "You are not admin to edit the details please go to Settings -> admin -> verify", Toast.LENGTH_SHORT).show();
+                }
+                else if (s.equals("admin")){
+                    EditText installationId, vehicle_type, vehicle_no, device_name, device_imei_no, sim_name, sim_imei_no, sim_no, location, service_time, service_engineer_name, site_incharge_name, authorised_person;
 
-                installation artist = arrayList.get(i);
-                showUpdateDeleteDialog(artist,artist.getInstallationId(), artist.getVehicle_no());
+                    installation artist = arrayList.get(i);
+                    showUpdateDeleteDialog(artist, artist.getInstallationId(), artist.getVehicle_no());
+                }
                 return true;
             }
         });
@@ -170,7 +179,7 @@ public class SecondFragment extends Fragment {
 
     private void showUpdateDeleteDialog(installation artist, final String artistId, String artistName) {
 
-        AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(getActivity());
+        AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(Objects.requireNonNull(getActivity()));
         LayoutInflater inflater = getLayoutInflater();
         final View view1 = inflater.inflate(R.layout.update_dialog, null);
         vehicle_type = view1.findViewById(R.id.text);
@@ -198,6 +207,7 @@ public class SecondFragment extends Fragment {
         service_engineer_name.setText(artist.getService_engineer_name());
         site_incharge_name.setText(artist.getSite_incharge_name());
         authorised_person.setText(artist.getAuthorised_person());
+
 
         dialogBuilder.setView(view1);
         final Button buttonUpdate =  view1.findViewById(R.id.buttonUpdateArtist);

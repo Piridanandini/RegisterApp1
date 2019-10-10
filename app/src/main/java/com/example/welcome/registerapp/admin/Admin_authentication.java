@@ -41,8 +41,9 @@ public class Admin_authentication extends AppCompatActivity {
                 String p = String.valueOf(editpass.getText());
                 if(s.equals("tracalogic") && p.equals("tracalogic@123"))
                 {
+
                     Toast.makeText(Admin_authentication.this, "you are now an admin, You can now update or delete from database", Toast.LENGTH_SHORT).show();
-                    ((global_vars) getApplication()).setSomeVariable("foo");
+                    ((global_vars) getApplication()).setSomeVariable("admin");
                 }
 
             }
