@@ -88,7 +88,7 @@
             android:layout_marginTop="60dp"
             android:layout_marginBottom="45dp"
             android:background="@drawable/edit"
-            android:text="Vehicle image"
+            android:text="Vehicle image 1"
             android:textColor="#000" />
 
     </LinearLayout>
@@ -118,7 +118,7 @@
             android:layout_marginTop="60dp"
             android:layout_marginBottom="45dp"
             android:background="@drawable/edit"
-            android:text="Vehicle image"
+            android:text="Vehicle image 2"
             android:textColor="#000" />
 
     </LinearLayout>
@@ -147,7 +147,7 @@
             android:layout_marginTop="60dp"
             android:layout_marginBottom="45dp"
             android:background="@drawable/edit"
-            android:text="Vehicle image"
+            android:text="Vehicle image 3"
             android:textColor="#000" />
 
     </LinearLayout>
@@ -175,10 +175,11 @@
             android:layout_marginTop="60dp"
             android:layout_marginBottom="45dp"
             android:background="@drawable/edit"
-            android:text="Vehicle image"
+            android:text="Final Packing Image"
             android:textColor="#000" />
 
     </LinearLayout>
+
 
 
 
@@ -205,7 +206,7 @@
             android:layout_marginTop="60dp"
             android:layout_marginBottom="45dp"
             android:background="@drawable/edit"
-            android:text="Vehicle image"
+            android:text="Vehicle Photo"
             android:textColor="#000" />
 
     </LinearLayout>
